@@ -18,11 +18,8 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="h-full px-10 md:px-28 flex justify-between relative">
-                <div className="absolute" >
-                    <NavItems isNavOpen={isNavOpen} setIsNavOpen={setisNavOpen} />
-                </div>
-                <div className={`text-3xl p-4 duration-500 ease-in-out z-[50] ${isNavOpen ? "text-white" : "text-black" } `}>
+            <nav className="h-full sm:px-10 md:px-16 flex justify-between relative">
+                <div className={`px-16 text-3xl p-4 duration-500 ease-in-out z-[50] ${isNavOpen ? "text-white" : "text-black" } `}>
                     <h1>Irzi</h1>
                 </div>
                 <div className="bg-gray-600 hidden sm:flex items-center p-4 gap-8 rounded-b-xl ">
@@ -31,16 +28,19 @@ export default function Navbar() {
                     <IconBtn source={projectsIcon} />
                     <IconBtn source={contactIcon} />
                 </div>
-                <div className="sm:hidden items-center flex z-[50] ">
+                <div className="sm:hidden items-center flex z-[50] px-16">
                     {/* <IconBtn source={contactIcon} /> */}
                     <HumbergerBtn isNavOpen={isNavOpen} onHumBtnClick={humbergerHandler} />
                 </div>
-
+                <div className="absolute" >
+                    <NavItems isNavOpen={isNavOpen} setIsNavOpen={setisNavOpen} />
+                </div>
             </nav>
         </>
     )
 };
 
+// Child Components
 function IconBtn({source}) {
     return (
         <>
@@ -119,7 +119,7 @@ const NavItems = ({ isNavOpen, setIsNavOpen }) => {
 
 	return (
 		<>
-			<motion.nav className={`fixed z-[45] items-center justify-center backdrop-blur-sm transition-all ease duration-700 overflow-hidden`} variants={navVariant} animate={isNavOpen ? "open" : "closed"} initial={false}>
+			<motion.nav className={`fixed z-[45] items-center justify-center backdrop-blur-sm transition-all w-screen ease duration-700 overflow-hidden`} variants={navVariant} animate={isNavOpen ? "open" : "closed"} initial={false}>
 				<div className="relative  backdrop-blur-sm opacity-95 flex flex-col items-center space-x-8 w-screen h-screen bg-gray-700">
 					<div className="flex flex-col items-center space-y-8 my-auto mx-0">
 						<motion.h1 animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ delay: 0.5, duration: 1 }} className="text-6xl font-bold text-white ">
