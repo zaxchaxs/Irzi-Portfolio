@@ -23,12 +23,18 @@ export default function Navbar() {
 					<div className={`px-16 text-3xl p-4 duration-500 ease-in-out z-[50] ${isNavOpen ? "text-white" : "text-black" } `}>
 						<h1>Irzi</h1>
 					</div>
-					<div className="bg-gray-600 hidden sm:flex items-center p-4 gap-8 rounded-b-xl ">
+					<motion.div
+						className="bg-gray-600 hidden sm:flex items-center p-4 gap-8 rounded-b-xl "
+						initial={{y: -50, opacity: 0}}
+						whileInView={{y:0, opacity: 1}}
+						transition={{delay: 0.7}}
+					>
 						<IconBtn source={homeIcon} />
 						<IconBtn source={aboutIcon} />
 						<IconBtn source={projectsIcon} />
 						<IconBtn source={contactIcon} />
-					</div>
+
+					</motion.div>
 					<div className="sm:hidden items-center flex z-[50] px-16">
 						{/* <IconBtn source={contactIcon} /> */}
 						<HumbergerBtn isNavOpen={isNavOpen} onHumBtnClick={humbergerHandler} />
