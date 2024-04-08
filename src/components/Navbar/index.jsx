@@ -5,7 +5,7 @@ import homeIcon from "@/../public/icon/home.svg"
 import aboutIcon from "@/../public/icon/person-circle.svg"
 import projectsIcon from "@/../public/icon/project-icon.svg"
 import contactIcon from "@/../public/icon/mail.svg"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { motion } from "framer-motion";
 
 export default function Navbar() {
@@ -18,23 +18,25 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="h-full sm:px-10 md:px-16 flex justify-between relative">
-                <div className={`px-16 text-3xl p-4 duration-500 ease-in-out z-[50] ${isNavOpen ? "text-white" : "text-black" } `}>
-                    <h1>Irzi</h1>
-                </div>
-                <div className="bg-gray-600 hidden sm:flex items-center p-4 gap-8 rounded-b-xl ">
-                    <IconBtn source={homeIcon} />
-                    <IconBtn source={aboutIcon} />
-                    <IconBtn source={projectsIcon} />
-                    <IconBtn source={contactIcon} />
-                </div>
-                <div className="sm:hidden items-center flex z-[50] px-16">
-                    {/* <IconBtn source={contactIcon} /> */}
-                    <HumbergerBtn isNavOpen={isNavOpen} onHumBtnClick={humbergerHandler} />
-                </div>
-                <div className="absolute" >
-                    <NavItems isNavOpen={isNavOpen} setIsNavOpen={setisNavOpen} />
-                </div>
+            <nav className="w-full fixed sm:px-10 md:px-16 backdrop-blur-sm border-2 border-red-400">
+				<div className="relative flex justify-between">
+					<div className={`px-16 text-3xl p-4 duration-500 ease-in-out z-[50] ${isNavOpen ? "text-white" : "text-black" } `}>
+						<h1>Irzi</h1>
+					</div>
+					<div className="bg-gray-600 hidden sm:flex items-center p-4 gap-8 rounded-b-xl ">
+						<IconBtn source={homeIcon} />
+						<IconBtn source={aboutIcon} />
+						<IconBtn source={projectsIcon} />
+						<IconBtn source={contactIcon} />
+					</div>
+					<div className="sm:hidden items-center flex z-[50] px-16">
+						{/* <IconBtn source={contactIcon} /> */}
+						<HumbergerBtn isNavOpen={isNavOpen} onHumBtnClick={humbergerHandler} />
+					</div>
+					<div className="absolute top-0 h-screen" >
+						<NavItems isNavOpen={isNavOpen} setIsNavOpen={setisNavOpen} />
+					</div>
+				</div>
             </nav>
         </>
     )
@@ -62,7 +64,7 @@ function HumbergerBtn({isNavOpen, onHumBtnClick}) {
     )
 }
 
-const NavItems = ({ isNavOpen, setIsNavOpen }) => {
+function NavItems({ isNavOpen, setIsNavOpen }) {
 	const handleItemClick = () => {
 		setIsNavOpen(false);
 	};
@@ -95,7 +97,7 @@ const NavItems = ({ isNavOpen, setIsNavOpen }) => {
         },
     },
     navVariant.closed = {
-        clipPath: "circle(0px at calc(100% - 99px) 35px)",
+        clipPath: "circle(0px at calc(100% - 85px) 35px)",
         transition: {
             delay: 0.5,
             type: "spring",

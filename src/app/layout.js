@@ -17,8 +17,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={"bg-gray-200  " + jost.className}>
-        <Navbar />
-        {children}
+        <div className='min-h-screen relative'>
+          <Navbar />
+          {children}
+        </div>
       </body>
     </html>
   );
