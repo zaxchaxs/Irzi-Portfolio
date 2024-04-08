@@ -1,4 +1,4 @@
-import { Inter, Jost } from "next/font/google";
+import { Jost } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
