@@ -27,12 +27,12 @@ export default function Navbar() {
 						className="bg-gray-600 hidden sm:flex items-center p-4 gap-8 rounded-b-xl "
 						initial={{y: -50, opacity: 0}}
 						whileInView={{y:0, opacity: 1}}
-						transition={{delay: 0.7}}
+						transition={{delay: 0.4}}
 					>
-						<IconBtn source={homeIcon} delay={0.8} ref="home" />
-						<IconBtn source={aboutIcon} delay={0.9} />
-						<IconBtn source={projectsIcon} delay={1} />
-						<IconBtn source={contactIcon} delay={1.1} />
+						<IconBtn source={homeIcon} delay={0.5} path="#home" />
+						<IconBtn source={aboutIcon} delay={0.55} />
+						<IconBtn source={projectsIcon} delay={0.6} />
+						<IconBtn source={contactIcon} delay={0.65} />
 
 					</motion.div>
 					<div className="sm:hidden items-center flex z-[50] px-16">
@@ -49,7 +49,7 @@ export default function Navbar() {
 };
 
 // Child Components
-function IconBtn({source, delay, ref="#"}) {
+function IconBtn({source, delay, path="#"}) {
     return (
 		<motion.div
 			initial={{y: -10, opacity: 0}}
@@ -61,7 +61,7 @@ function IconBtn({source, delay, ref="#"}) {
 
 			  }}
 		>
-            <Link href={`#${ref}`}>
+            <Link href={path}>
                 <Image className="h-6 rounded-md w-fit" src={source}  />
             </Link>
 		</motion.div>
@@ -142,7 +142,7 @@ function NavItems({ isNavOpen, setIsNavOpen }) {
 						<motion.h1 animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ delay: 0.5, duration: 1 }} className="text-6xl font-bold text-white ">
                             Menu
                         </motion.h1>
-						<Link href={"/"}>
+						<Link href={"/home"}>
 							<div onClick={handleItemClick} className="text-2xl font-bold text-white" variants={itemVariants} animate={isNavOpen ? "open" : "closed"} delay={1}> 
 								<motion.h2 className="text-white" variants={itemVariants} animate={isNavOpen ? "open" : "closed"}>
                                     Home
