@@ -18,7 +18,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="w-full fixed sm:px-10 md:px-16 backdrop-blur-sm border-2 border-red-400">
+            <nav className="w-full fixed sm:px-10 md:px-16 backdrop-blur-sm">
 				<div className="relative flex justify-between">
 					<div className={`px-16 text-3xl p-4 duration-500 ease-in-out z-[50] ${isNavOpen ? "text-white" : "text-black" } `}>
 						<h1>Irzi</h1>
@@ -29,10 +29,10 @@ export default function Navbar() {
 						whileInView={{y:0, opacity: 1}}
 						transition={{delay: 0.7}}
 					>
-						<IconBtn source={homeIcon} />
-						<IconBtn source={aboutIcon} />
-						<IconBtn source={projectsIcon} />
-						<IconBtn source={contactIcon} />
+						<IconBtn source={homeIcon} delay={0.8} />
+						<IconBtn source={aboutIcon} delay={0.9} />
+						<IconBtn source={projectsIcon} delay={1} />
+						<IconBtn source={contactIcon} delay={1.1} />
 
 					</motion.div>
 					<div className="sm:hidden items-center flex z-[50] px-16">
@@ -49,13 +49,22 @@ export default function Navbar() {
 };
 
 // Child Components
-function IconBtn({source}) {
+function IconBtn({source, delay}) {
     return (
-        <>
-            <Link className="hover:scale-110 active:scale-100" href={"#"}>
+		<motion.div
+			initial={{y: -10, opacity: 0}}
+			whileInView={{y:0, opacity: 1}}
+			transition={{delay: delay}}
+			whileHover={{
+				scale: 1.2,
+				transition: { duration: 0.1 },
+
+			  }}
+		>
+            <Link href={"#"}>
                 <Image className="h-6 rounded-md w-fit" src={source}  />
             </Link>
-        </>
+		</motion.div>
     )
 };
 
