@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@fullpage/react-fullpage": "^0.1.42",
+    "@fullpage/react-fullpage": "^0.1.40",
     "framer-motion": "^11.0.25",
     "next": "14.1.4",
     "react": "^18",

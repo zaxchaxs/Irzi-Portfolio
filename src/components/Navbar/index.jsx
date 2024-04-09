@@ -18,7 +18,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="w-full fixed sm:px-10 md:px-16 backdrop-blur-sm">
+            <nav className="w-full fixed sm:px-10 md:px-16 backdrop-blur-sm z-50">
 				<div className="relative flex justify-between">
 					<div className={`px-16 text-3xl p-4 duration-500 ease-in-out z-[50] ${isNavOpen ? "text-white" : "text-black" } `}>
 						<h1>Irzi</h1>
@@ -29,7 +29,7 @@ export default function Navbar() {
 						whileInView={{y:0, opacity: 1}}
 						transition={{delay: 0.7}}
 					>
-						<IconBtn source={homeIcon} delay={0.8} />
+						<IconBtn source={homeIcon} delay={0.8} ref="home" />
 						<IconBtn source={aboutIcon} delay={0.9} />
 						<IconBtn source={projectsIcon} delay={1} />
 						<IconBtn source={contactIcon} delay={1.1} />
@@ -49,7 +49,7 @@ export default function Navbar() {
 };
 
 // Child Components
-function IconBtn({source, delay}) {
+function IconBtn({source, delay, ref="#"}) {
     return (
 		<motion.div
 			initial={{y: -10, opacity: 0}}
@@ -61,7 +61,7 @@ function IconBtn({source, delay}) {
 
 			  }}
 		>
-            <Link href={"#"}>
+            <Link href={`#${ref}`}>
                 <Image className="h-6 rounded-md w-fit" src={source}  />
             </Link>
 		</motion.div>
