@@ -30,6 +30,9 @@ const MyPage = () => {
 						<div className="section">
                             <AboutMeSection fontLexend={lexendDeca.className} />
 						</div>
+						<div className='section'>
+							<AboutMeSection fontLexend={lexendDeca.className} />
+						</div>
 					</ReactFullpage.Wrapper>
 				)}
 				{...fullpageOptions}

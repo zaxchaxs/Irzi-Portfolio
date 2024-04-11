@@ -22,7 +22,7 @@ export default function Navbar({isHomePage}) {
 		if(isHomePage) {
 			fullpage_api.moveTo(path);
 			fullpage_api.getActiveSection();
-			setisNavOpen(!isNavOpen);
+			setisNavOpen(false);
 		}
 		route.push(router)
 

@@ -14,9 +14,10 @@ export default function AboutMeSection({fontLexend}) {
                     <motion.h1
                         className='text-4xl sm:text-6xl'
                         initial={{ x: -100, opacity: 0 }}
-                        whileInView={{x:0, opacity: 1}}
+                        whileInView={{x: 0, opacity: 1}}
                         transition={{delay: 0.3, type: "spring"}}
-                    >{`About Me`}
+                    >
+                    About Me
                     </motion.h1>
                 </div>
                 <motion.div 
@@ -25,20 +26,18 @@ export default function AboutMeSection({fontLexend}) {
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{delay: 0.4, type: "spring"}}
                 >
-                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit officia ipsam provident, nostrum vero ipsa soluta veritatis voluptatem quisquam excepturi libero, aliquam vel maiores quis esse, voluptas in a totam?</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit officia ipsam provident, nostrum vero ipsa soluta veritatis voluptatem quisquam excepturi libero, aliquam vel maiores quis esse, voluptas in a totam?</p>
                     <div className='p-2 sm:p-4 flex justify-center items-center sm:block'>
                         <HomeButton value="Learn More" background={"bg-gray-600"} textCol={"text-white"} bgHover="hover:bg-white" textHov={"hover:text-gray-600"} />
                     </div>
                 </motion.div>
             </div>
-            <div 
-                className="hidden md:flex w-full h-auto border-2 border-black p-4 relative"
-                initial={{x: 200, opacity: 0}}
-                whileInView={{x: 0, opacity: 1}}
-                transition={{delay: 0.6, type: "spring"}}
+            <div className="hidden md:flex w-full h-auto border-2 border-black p-4 relative"
             >
                 <motion.div
-                    
+                    initial={{x: 200, opacity: 0}}
+                    whileInView={{x: 0, opacity: 1}}
+                    transition={{delay: 0.6, type: "spring"}}
                 >
                     <Image src={blueGamepad} width={500} height={500} alt="Random Image" className="top-0 left-0 z-10 w-56 h-48 object-cover grayscale placeholder:blur hover:grayscale-0 duration-300" />
                 </motion.div>
