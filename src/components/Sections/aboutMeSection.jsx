@@ -40,13 +40,13 @@ export default function AboutMeSection({fontLexend}) {
                 <motion.div
                     
                 >
-                    <Image src={blueGamepad} width={500} height={500} className="top-0 left-0 z-10 w-56 h-48 object-cover grayscale placeholder:blur hover:grayscale-0 duration-300" />
+                    <Image src={blueGamepad} width={500} height={500} alt="Random Image" className="top-0 left-0 z-10 w-56 h-48 object-cover grayscale placeholder:blur hover:grayscale-0 duration-300" />
                 </motion.div>
                 <motion.div>
-                    <Image src={blueLight} width={500} height={500} className="top-32 right-7 absolute w-44 h-40 object-cover grayscale placeholder:blur hover:grayscale-0 duration-300" />
+                    <Image src={blueLight} width={500} height={500} alt="Random Image" className="top-32 right-7 absolute w-44 h-40 object-cover grayscale placeholder:blur hover:grayscale-0 duration-300" />
                 </motion.div>
                 <motion.div>
-                    <Image src={greenLight} width={500} height={500} className="bottom-10 left-20 absolute w-36 h-32 object-cover grayscale placeholder:blur hover:grayscale-0 duration-300" />
+                    <Image src={greenLight} width={500} height={500} alt="Random Image" className="bottom-10 left-20 absolute w-36 h-32 object-cover grayscale placeholder:blur hover:grayscale-0 duration-300" />
                 </motion.div>
 
             </div>

@@ -1,5 +1,4 @@
 'use client'
-import ReactFullpage from '@fullpage/react-fullpage';
 import Image from "next/image"
 import { motion } from "framer-motion";
 import mySelf from "../../../public/img/myself.jpg"
@@ -7,7 +6,7 @@ import HomeButton from '@/components/Button/homeButton';
 
 export default function HomeSection({fontLexend}) {
     return (
-        <div className='p-10 sm:p-24 mx-auto pt-20 md:flex justify-between overflow-hidden' id="home">
+        <div className='p-10 sm:px-24 mx-auto pt-20 md:flex justify-between overflow-hidden'>
             <motion.div
                 className=' md:hidden items-center justify-center flex'
                 initial={{y: -100, opacity: 0}}
@@ -15,7 +14,7 @@ export default function HomeSection({fontLexend}) {
                 transition={{delay: 0.6, type: "spring"}}
 
             >
-                <Image src={mySelf} width={200} height={200} alt='Irzi Rahmatullah' className='h-40 w-40 grayscale placeholder:blur hover:grayscale-0 duration-300 rounded-full object-cover items-center justify-center' />
+                <Image alt='Irzi Rahmatullah' src={mySelf} width={200} height={200} className='h-40 w-40 grayscale placeholder:blur hover:grayscale-0 duration-300 rounded-full object-cover items-center justify-center' />
             </motion.div>
             <div className='p-4 sm:p-2 w-full '>
                 <div className='justify-center flex md:inline'>

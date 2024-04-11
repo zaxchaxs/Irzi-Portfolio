@@ -7,14 +7,26 @@ import projectsIcon from "@/../public/icon/project-icon.svg"
 import contactIcon from "@/../public/icon/mail.svg"
 import { useState } from "react"
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
-export default function Navbar() {
-    const [isNavOpen, setisNavOpen] = useState(false);
+
+export default function Navbar({isHomePage}) {
+	const [isNavOpen, setisNavOpen] = useState(false);
+	const route = useRouter();
 
     // function handler
     const humbergerHandler = () => {
         setisNavOpen(!isNavOpen);
     };
+	const handlerMoveSection = (path, router) => {
+		if(isHomePage) {
+			fullpage_api.moveTo(path);
+			fullpage_api.getActiveSection();
+			setisNavOpen(!isNavOpen);
+		}
+		route.push(router)
+
+	};
 
     return (
         <>
@@ -29,10 +41,10 @@ export default function Navbar() {
 						whileInView={{y:0, opacity: 1}}
 						transition={{delay: 0.4}}
 					>
-						<IconBtn source={homeIcon} delay={0.5} path="#home" />
-						<IconBtn source={aboutIcon} delay={0.55} />
-						<IconBtn source={projectsIcon} delay={0.6} />
-						<IconBtn source={contactIcon} delay={0.65} />
+						<IconBtn source={homeIcon} delay={0.5} path={1} route={"/#home"} onIconClick={handlerMoveSection} />
+						<IconBtn source={aboutIcon} delay={0.55} path={2} route={"/#about"} onIconClick={handlerMoveSection} />
+						<IconBtn source={projectsIcon} delay={0.6} path={3} route={"/#projects"} onIconClick={handlerMoveSection} />
+						<IconBtn source={contactIcon} delay={0.65} path={4} route={"/#contacts"} onIconClick={handlerMoveSection} />
 
 					</motion.div>
 					<div className="sm:hidden items-center flex z-[50] px-16">
@@ -40,7 +52,7 @@ export default function Navbar() {
 						<HumbergerBtn isNavOpen={isNavOpen} onHumBtnClick={humbergerHandler} />
 					</div>
 					<div className="absolute top-0 h-screen" >
-						<NavItems isNavOpen={isNavOpen} setIsNavOpen={setisNavOpen} />
+						<NavItems isNavOpen={isNavOpen} setIsNavOpen={setisNavOpen} onButtonClick={handlerMoveSection} />
 					</div>
 				</div>
             </nav>
@@ -49,9 +61,11 @@ export default function Navbar() {
 };
 
 // Child Components
-function IconBtn({source, delay, path="#"}) {
+function IconBtn({source, delay, path=1, onIconClick, route}) {
     return (
 		<motion.div
+			className="cursor-pointer"
+			whileTap={() => onIconClick(path, route)}
 			initial={{y: -10, opacity: 0}}
 			whileInView={{y:0, opacity: 1}}
 			transition={{delay: delay}}
@@ -61,9 +75,7 @@ function IconBtn({source, delay, path="#"}) {
 
 			  }}
 		>
-            <Link href={path}>
-                <Image className="h-6 rounded-md w-fit" src={source}  />
-            </Link>
+			<Image className="h-6 rounded-md w-fit" src={source} alt="Icon Button" />
 		</motion.div>
     )
 };
@@ -79,8 +91,12 @@ function HumbergerBtn({isNavOpen, onHumBtnClick}) {
     )
 }
 
-function NavItems({ isNavOpen, setIsNavOpen }) {
-	const handleItemClick = () => {
+function NavItems({ isNavOpen, setIsNavOpen, onButtonClick}) {
+	const handleItemClick = (index) => {
+		if(index) {
+			fullpage_api.moveTo(index)
+			fullpage_api.getActiveSection();
+		}
 		setIsNavOpen(false);
 	};
 	const navVariant = {
@@ -142,34 +158,10 @@ function NavItems({ isNavOpen, setIsNavOpen }) {
 						<motion.h1 animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ delay: 0.5, duration: 1 }} className="text-6xl font-bold text-white ">
                             Menu
                         </motion.h1>
-						<Link href={"/home"}>
-							<div onClick={handleItemClick} className="text-2xl font-bold text-white" variants={itemVariants} animate={isNavOpen ? "open" : "closed"} delay={1}> 
-								<motion.h2 className="text-white" variants={itemVariants} animate={isNavOpen ? "open" : "closed"}>
-                                    Home
-                                </motion.h2>
-							</div>
-						</Link>
-						<Link href="/about">
-							<div onClick={handleItemClick} className="text-2xl font-bold text-white" variants={itemVariants} animate={isNavOpen ? "open" : "closed"} delay={1.2}>
-								<motion.h2 className="text-white" variants={itemVariants} animate={isNavOpen ? "open" : "closed"}>
-									About
-								</motion.h2>
-							</div>
-						</Link>
-						<Link href="/projects">
-							<div onClick={handleItemClick} className="text-2xl font-bold text-white" variants={itemVariants} animate={isNavOpen ? "open" : "closed"} delay={1.3}>
-								<motion.h2 className="text-white" variants={itemVariants} animate={isNavOpen ? "open" : "closed"}>
-									Projects
-								</motion.h2>
-							</div>
-						</Link>
-						<a href="/#contact">
-							<div onClick={handleItemClick} className="text-2xl font-bold text-white" variants={itemVariants} animate={isNavOpen ? "open" : "closed"} delay={1.4}>
-								<motion.h2 className="text-white" variants={itemVariants} animate={isNavOpen ? "open" : "closed"}>
-									Contact
-								</motion.h2>
-							</div>
-						</a>
+						<MenuButton onButtonClick={onButtonClick} delay={1.1} menu={"Home"} itemVariants={itemVariants} isNavOpen={isNavOpen} routes={"/#home"} index={1} />
+						<MenuButton onButtonClick={onButtonClick} delay={1.2} menu={"About"} itemVariants={itemVariants} isNavOpen={isNavOpen} routes={"/#about"} index={2} />
+						<MenuButton onButtonClick={onButtonClick} delay={1.3} menu={"Projects"} itemVariants={itemVariants} isNavOpen={isNavOpen} routes={"/#projects"} index={3} />
+						<MenuButton onButtonClick={onButtonClick} delay={1.4} menu={"Contact"} itemVariants={itemVariants} isNavOpen={isNavOpen} routes={"/#contact"} index={4} />
 					</div>
 				</div>
 			</motion.nav>
@@ -177,3 +169,12 @@ function NavItems({ isNavOpen, setIsNavOpen }) {
 	);
 };
 
+function MenuButton({onButtonClick, delay, menu, itemVariants, isNavOpen, routes, index}) {
+	return(
+		<div onClick={() => onButtonClick(index, routes)} className="cursor-pointer text-2xl font-bold text-white" variants={itemVariants} animate={isNavOpen ? "open" : "closed"} delay={delay}>
+			<motion.h2 className="text-white" variants={itemVariants} animate={isNavOpen ? "open" : "closed"}>
+				{menu}
+			</motion.h2>
+		</div>
+	)
+}
