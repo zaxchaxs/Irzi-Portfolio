@@ -52,7 +52,7 @@ export default function HomeSection({fontLexend}) {
                     <div className='py-4 sm:py-6'>
                         <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit officia ipsam provident, nostrum vero ipsa soluta veritatis voluptatem quisquam excepturi libero, aliquam vel maiores quis esse, voluptas in a totam?</h1>
                     </div>
-                    <div className='p-2 sm:p-4 flex justify-center items-center sm:block'>
+                    <div className='p-2 sm:p-4 flex justify-center items-center md:block'>
                         <HomeButton value="Download CV" background={"bg-gray-600"} textCol={"text-white"} bgHover="hover:bg-white" textHov={"hover:text-gray-600"} />
                         <HomeButton value="Contact Me" background='bg-white' textCol="text-gray-600" bgHover={"hover:bg-gray-600"} textHov={"hover:text-white"} />
                     </div>
