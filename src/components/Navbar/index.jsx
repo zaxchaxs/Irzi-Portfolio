@@ -1,6 +1,5 @@
 'use client'
 import Image from "next/image"
-import Link from "next/link"
 import homeIcon from "@/../public/icon/home.svg" 
 import aboutIcon from "@/../public/icon/person-circle.svg"
 import projectsIcon from "@/../public/icon/project-icon.svg"
@@ -92,13 +91,13 @@ function HumbergerBtn({isNavOpen, onHumBtnClick}) {
 }
 
 function NavItems({ isNavOpen, setIsNavOpen, onButtonClick}) {
-	const handleItemClick = (index) => {
-		if(index) {
-			fullpage_api.moveTo(index)
-			fullpage_api.getActiveSection();
-		}
-		setIsNavOpen(false);
-	};
+	// const handleItemClick = (index) => {
+	// 	if(index) {
+	// 		fullpage_api.moveTo(index)
+	// 		fullpage_api.getActiveSection();
+	// 	}
+	// 	setIsNavOpen(false);
+	// };
 	const navVariant = {
 		open: {
 			clipPath: `circle(1920px at calc(100% - 40px) 40px)`,

@@ -5,6 +5,8 @@ import HomeButton from "../Button/homeButton";
 import blueGamepad from "@/../public/img/randomPict/blue-gamepad.jpg"
 import blueLight from "@/../public/img/randomPict/blueLight.jpg"
 import greenLight from "@/../public/img/randomPict/greenLight.jpg"
+import Link from "next/link";
+
 
 export default function AboutMeSection({fontLexend}) {
     return(
@@ -28,7 +30,10 @@ export default function AboutMeSection({fontLexend}) {
                 >
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit officia ipsam provident, nostrum vero ipsa soluta veritatis voluptatem quisquam excepturi libero, aliquam vel maiores quis esse, voluptas in a totam?</p>
                     <div className='p-2 sm:p-4 flex justify-center items-center sm:block'>
+                    <Link href={"/about"} >
                         <HomeButton value="Learn More" background={"bg-gray-600"} textCol={"text-white"} bgHover="hover:bg-white" textHov={"hover:text-gray-600"} />
+
+                    </Link>
                     </div>
                 </motion.div>
             </div>

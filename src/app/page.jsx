@@ -10,7 +10,7 @@ const lexendDeca = Lexend_Deca({
     display: "swap",
 })
 
-const MyPage = () => {
+export default function HomePage() {
 	const fullpageOptions = {
 		anchors: ["home", "about", "projects", "contact"],
 		scrollingSpeed: 1000,
@@ -40,9 +40,6 @@ const MyPage = () => {
 		</div>
 	);
 };
-
-export default MyPage;
-
 
 // export default function Home() {
 
