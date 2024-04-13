@@ -3,6 +3,8 @@ import Image from "next/image"
 import { motion } from "framer-motion";
 import mySelf from "../../../public/img/myself.jpg"
 import HomeButton from '@/components/Button/homeButton';
+import Link from "next/link";
+
 
 export default function HomeSection({fontLexend}) {
     return (
@@ -53,8 +55,12 @@ export default function HomeSection({fontLexend}) {
                         <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit officia ipsam provident, nostrum vero ipsa soluta veritatis voluptatem quisquam excepturi libero, aliquam vel maiores quis esse, voluptas in a totam?</h1>
                     </div>
                     <div className='p-2 sm:p-4 flex justify-center items-center md:block'>
-                        <HomeButton value="Download CV" background={"bg-gray-600"} textCol={"text-white"} bgHover="hover:bg-white" textHov={"hover:text-gray-600"} />
-                        <HomeButton value="Contact Me" background='bg-white' textCol="text-gray-600" bgHover={"hover:bg-gray-600"} textHov={"hover:text-white"} />
+                        <Link href={"/docs/testing.pdf"}>
+                            <HomeButton value="Download CV" background={"bg-gray-600"} textCol={"text-white"}       bgHover="hover:bg-white" textHov={"hover:text-gray-600"} />
+                        </Link>
+                        <Link href={"/#projects"} >
+                            <HomeButton value="Contact Me" background='bg-white' textCol="text-gray-600" bgHover={"hover:bg-gray-600"} textHov={"hover:text-white"} />
+                        </Link>
                     </div>
                 </motion.div>
             </div>
@@ -67,22 +73,6 @@ export default function HomeSection({fontLexend}) {
             >
                 <Image src={mySelf} width={600} height={600} className='w-96 h-96 grayscale placeholder:blur hover:grayscale-0 duration-300 rounded-3xl object-cover' alt='Irzi Rahmatullah' />
             </motion.div>
-        
-        
-
-                {/* <ReactFullpage 
-            render={({state, fullpageAPI}) => {
-                <ReactFullpage.Wrapper>
-                    <div className='section'>
-                        <h1>Testing</h1>
-                    </div>
-                    <div className='section'>
-                        <h1>testing2</h1>
-                    </div>
-                </ReactFullpage.Wrapper>
-            }}
-            {...fullpageOptions}
-        /> */}
         </div>
     )
 }

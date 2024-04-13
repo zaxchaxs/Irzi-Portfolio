@@ -65,8 +65,8 @@ function IconBtn({source, delay, path=1, onIconClick, route}) {
 		<motion.div
 			className="cursor-pointer"
 			whileTap={() => onIconClick(path, route)}
-			initial={{y: -10, opacity: 0}}
-			whileInView={{y:0, opacity: 1}}
+			initial={{y: -10, opacity: 0, scale: 0.5}}
+			whileInView={{y:0, opacity: 1, scale: 1}}
 			transition={{delay: delay}}
 			whileHover={{
 				scale: 1.2,
