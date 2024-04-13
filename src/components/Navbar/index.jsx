@@ -1,12 +1,17 @@
 'use client'
 import Image from "next/image"
+
+// icons
 import homeIcon from "@/../public/icon/home.svg" 
 import aboutIcon from "@/../public/icon/person-circle.svg"
 import projectsIcon from "@/../public/icon/project-icon.svg"
 import contactIcon from "@/../public/icon/mail.svg"
+import backArrow from "@/../public/icon/arrow-back.svg"
+
 import { useState } from "react"
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
+import Link from "next/link"
 
 
 export default function Navbar({isHomePage}) {
@@ -31,7 +36,17 @@ export default function Navbar({isHomePage}) {
         <>
             <nav className="w-full fixed sm:px-10 md:px-16 backdrop-blur-sm z-50">
 				<div className="relative flex justify-between">
-					<div className={`px-16 text-3xl p-4 duration-500 ease-in-out z-[50] ${isNavOpen ? "text-white" : "text-black" } `}>
+					<div className={`mx-6 text-3xl p-4 duration-500 relative ease-in-out z-[50] justify-center items-center flex ${isNavOpen ? "text-white" : "text-black" } `}>
+						<motion.div
+							className={`absolute -left-5 ${isHomePage || isNavOpen ? "hidden" : ""}`}
+							initial={{scale: 1}}
+							whileHover={{scale: 1.2}}
+							whileTap={{scale: 1}}
+						>
+							<Link href={"/"}>
+								<Image src={backArrow} width={50} height={50} alt="back route icon" />
+							</Link>
+						</motion.div>
 						<h1>Irzi</h1>
 					</div>
 					<motion.div
