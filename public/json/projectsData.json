@@ -7,7 +7,7 @@
             "tech": ["JavaScript", "CSS", "HTML"],
             "source": "https://github.com/zaxchaxs/Weather-Report",
             "preview": "https://zaxchaxs.github.io/Weather-Report/public",
-            "image": "",
+            "image": "/img/projectsImage/wheaterReport.png",
             "year": "2023"
         },
         {
@@ -17,7 +17,7 @@
             "tech": ["Tailwind", "JavaScript"],
             "source": "https://github.com/zaxchaxs/IrziRahmatullah-Portfolio",
             "preview": "https://zaxchaxs.github.io/IrziRahmatullah-Portfolio/public/",
-            "image": "",
+            "image": "/img/projectsImage/wheaterReport.png",
             "year": "2024"
         },
         {
@@ -26,7 +26,7 @@
             "desc": "This project is the culmination of my learning journey in building a RESTful API for effective task management and organization. API for managing and organizing your tasks effectively, like Create, Read, Update, and Delete (CRUD) a personal task management or integrating task functionality into your project.",
             "tech": ["Node.js", "Express", "Prisma", "Joi"],
             "source": "https://github.com/zaxchaxs/TodoList-API-Project",
-            "image": "",
+            "image": "/img/projectsImage/wheaterReport.png",
             "year": "2024"
         },
         {
@@ -36,7 +36,7 @@
             "tech": ["Next.js", "React", "TMDB API"],
             "source": "https://github.com/zaxchaxs/MovieList-With-NextJS",
             "preview": "https://moviespreview.vercel.app/",
-            "image": "",
+            "image": "/img/projectsImage/wheaterReport.png",
             "year": "2024"
         }
     ]
