@@ -1,0 +1,43 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "title": "Weather Report",
+            "desc": "This project is the result of practicing API requests by creating a simple Weather Report web using JavaScript. Requesting the API to weather.visual crossing. With a simple interface, I managed to create this weather report even though its accuracy level is not very high.",
+            "tech": ["JavaScript", "CSS", "HTML"],
+            "source": "https://github.com/zaxchaxs/Weather-Report",
+            "preview": "https://zaxchaxs.github.io/Weather-Report/public",
+            "image": "",
+            "year": "2023"
+        },
+        {
+            "id": 2,
+            "title": "Irzi | First Portfolio",
+            "desc": "My first portfolio website created only using Tailwind CSS and Vanilla JavaScript.",
+            "tech": ["Tailwind", "JavaScript"],
+            "source": "https://github.com/zaxchaxs/IrziRahmatullah-Portfolio",
+            "preview": "https://zaxchaxs.github.io/IrziRahmatullah-Portfolio/public/",
+            "image": "",
+            "year": "2024"
+        },
+        {
+            "id": 3,
+            "title": "Todo List RESTful API",
+            "desc": "This project is the culmination of my learning journey in building a RESTful API for effective task management and organization. API for managing and organizing your tasks effectively, like Create, Read, Update, and Delete (CRUD) a personal task management or integrating task functionality into your project.",
+            "tech": ["Node.js", "Express", "Prisma", "Joi"],
+            "source": "https://github.com/zaxchaxs/TodoList-API-Project",
+            "image": "",
+            "year": "2024"
+        },
+        {
+            "id": 4,
+            "title": "MovieList With NextJS",
+            "desc": "This is a simple web application built with Next.js that displays a list of movies and TV series.",
+            "tech": ["Next.js", "React", "TMDB API"],
+            "source": "https://github.com/zaxchaxs/MovieList-With-NextJS",
+            "preview": "https://moviespreview.vercel.app/",
+            "image": "",
+            "year": "2024"
+        }
+    ]
+}

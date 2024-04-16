@@ -1,6 +1,7 @@
 'use client'
 import AboutMeSection from '@/components/Sections/aboutMeSection';
 import HomeSection from '@/components/Sections/homeSection';
+import ProjectsSection from '@/components/Sections/projectsSection';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { Lexend_Deca } from 'next/font/google';
 
@@ -31,7 +32,8 @@ export default function HomePage() {
                             <AboutMeSection fontLexend={lexendDeca.className} />
 						</div>
 						<div className='section'>
-							<AboutMeSection fontLexend={lexendDeca.className} />
+							{/* <AboutMeSection fontLexend={lexendDeca.className} /> */}
+							<ProjectsSection fontLexend={lexendDeca.className} />
 						</div>
 					</ReactFullpage.Wrapper>
 				)}
