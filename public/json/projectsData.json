@@ -17,7 +17,7 @@
             "tech": ["Tailwind", "JavaScript"],
             "source": "https://github.com/zaxchaxs/IrziRahmatullah-Portfolio",
             "preview": "https://zaxchaxs.github.io/IrziRahmatullah-Portfolio/public/",
-            "image": "/img/projectsImage/wheaterReport.png",
+            "image": "/img/projectsImage/firstPortfolio.jpg",
             "year": "2024"
         },
         {
@@ -26,17 +26,26 @@
             "desc": "This project is the culmination of my learning journey in building a RESTful API for effective task management and organization. API for managing and organizing your tasks effectively, like Create, Read, Update, and Delete (CRUD) a personal task management or integrating task functionality into your project.",
             "tech": ["Node.js", "Express", "Prisma", "Joi"],
             "source": "https://github.com/zaxchaxs/TodoList-API-Project",
-            "image": "/img/projectsImage/wheaterReport.png",
+            "image": "/img/projectsImage/todoListAPI.jpg",
             "year": "2024"
         },
         {
             "id": 4,
+            "title": "Todo List Web App With Next.js",
+            "desc": "Practicing create a Todo List Web App with React and Next.js.",
+            "tech": ["Node.js", "Next.js", "React"],
+            "source": "https://github.com/zaxchaxs/Todo-List-Web-App-with-React",
+            "image": "/img/projectsImage/webTodoList.jpg",
+            "year": "2024"
+        },
+        {
+            "id": 5,
             "title": "MovieList With NextJS",
             "desc": "This is a simple web application built with Next.js that displays a list of movies and TV series.",
             "tech": ["Next.js", "React", "TMDB API"],
             "source": "https://github.com/zaxchaxs/MovieList-With-NextJS",
             "preview": "https://moviespreview.vercel.app/",
-            "image": "/img/projectsImage/wheaterReport.png",
+            "image": "/img/projectsImage/movieList.jpg",
             "year": "2024"
         }
     ]
