@@ -23,7 +23,7 @@ export default function ProjectsSection({fontLexend}) {
 
     return(
         <div className="w-full mx-auto p-10 sm:px-24 md:flex border-2 overflow-hidden border-black justify-between" >
-            <div className="w-full" >
+            <div className="w-full text-center md:text-left mx-auto" >
                 <div className={`md:text-left mx-auto text-center p-4 md:block sm:mt-7 text-black font-bold ${fontLexend}`}>
                     <motion.h1
                         className='text-4xl md:text-5xl sm:text-6xl'
@@ -81,7 +81,7 @@ function ProjectCard({data}) {
                             transition={{delay: 0.5, type: "spring"}}
                             whileHover={{scale: 1.2, transition: {delay: 0, type: "spring"}}}
                         >
-                            <Link href={e.source}>
+                            <Link href={e.source} target="blank">
                                 <Image src={githubIcon} alt="githubIcon" width={50} height={50} />
                             </Link>
                         </motion.div>
@@ -105,6 +105,19 @@ function ProjectCard({data}) {
                             whileTap={{scale: 1}}
                         >
                             <Image className="w-full" src={nextArrow} width={30} height={30} alt="Next" />
+                        </motion.div>
+
+                        <motion.div
+                            className={`absolute z-10 bottom-4 left-4 sm:bottom-5 sm:left-8 ${e.preview ? "" : "hidden"}`}
+                            initial={{scale: 0, y: 0, opacity: 0}}
+                            whileInView={{scale: 1, y: 0, opacity: 1, transition:{delay: 0.6, type: "spring"}}}
+                            whileHover={{scale: 1.2}}
+                        >
+                            <div className="cursor-pointer bg-gray-600 text-white font-bold p-1 px-2 sm:p-1 sm:px-4 text-xxs sm:text-sm rounded-lg sm:rounded-xl border-2 border-gray-600 hover:bg-white hover:text-gray-600 ease-in-out duration-300">
+                                <Link href={e.preview ? e.preview : "#" } target="blank">
+                                    Preview
+                                </Link>
+                            </div>
                         </motion.div>
                     </div>
                 ))
