@@ -1,18 +1,17 @@
 'use client'
 import Image from "next/image"
-import { motion } from "framer-motion";
 import HomeButton from "../Button/homeButton";
-import blueRandomPict from "@/../public/img/randomPict/giphy.gif"
 import Link from "next/link";
-
+import blueRandomPict from "@/../public/img/randomPict/giphy.gif"
+import { motion } from "framer-motion";
 
 export default function AboutMeSection({fontLexend}) {
     return(
         <div className="w-full mx-auto p-10 sm:px-24 pt-20 md:flex overflow-hidden relative" >
-            <div className="md:hidden absolute left-[30%] sm:left-[35%] sm:-top-8 -top-2 -z-10 items-center justify-center w-40 sm:w-56 p-2">
+            <div className="md:hidden absolute left-[30%] sm:left-[35%] sm:-top-8 -top-6 -z-10 items-center justify-center w-40 sm:w-56 p-2">
                 <PopCatGif isMobileWidth={true} />
             </div>
-            <div className="hidden md:flex items-center justify-center w-1/2 min-w-72 p-2 border-2 border-black">
+            <div className="hidden md:flex items-center justify-center w-1/2 min-w-72 p-2">
                 <PopCatGif isMobileWidth={false} />
             </div>
             <div className="p-2 w-full" >
@@ -49,9 +48,9 @@ function PopCatGif({isMobileWidth}) {
     return (
         <>
             <motion.div
-                className="w-full border-2 border-black"
+                className="w-full"
                 initial={
-                    isMobileWidth ? {y: -100, opacity: 0, scale: 0.3 } : {x: 200, opacity: 0, scale: 0.3} 
+                    isMobileWidth ? {y: -50, opacity: 0, scale: 0.3 } : {x: 200, opacity: 0, scale: 0.3} 
                 }
                 whileInView={
                     isMobileWidth ? {y: 0, opacity: 1, scale: 1} : {x: 0, opacity: 1, scale: 1}

@@ -1,9 +1,9 @@
 'use client'
 import Image from "next/image"
-import { motion } from "framer-motion";
-import mySelf from "../../../public/img/myself.jpg"
 import HomeButton from '@/components/Button/homeButton';
 import Link from "next/link";
+import { motion } from "framer-motion";
+import mySelf from "../../../public/img/myself.jpg"
 
 
 export default function HomeSection({fontLexend}) {
@@ -59,7 +59,7 @@ export default function HomeSection({fontLexend}) {
                             <HomeButton value="Download CV" background={"bg-gray-600"} textCol={"text-white"}       bgHover="hover:bg-white" textHov={"hover:text-gray-600"} />
                         </Link>
                         <div onClick={() => {
-                            fullpage_api.moveTo(3);
+                            fullpage_api.moveTo(4);
                             fullpage_api.getActiveSection();
                             }}>
                             <HomeButton value="Contact Me" background='bg-white' textCol="text-gray-600" bgHover={"hover:bg-gray-600"} textHov={"hover:text-white"} />

@@ -1,28 +1,22 @@
 'use client'
-import { delay, motion } from "framer-motion";
+
+// Components
 import HomeButton from "../Button/homeButton";
 import Link from "next/link";
-import dataProject from "@/../public/json/projectsData.json";
 import Image from "next/image";
-import testingImage from "@/../public/img/projectsImage/firstPortfolio.jpg";
+import dataProject from "@/../public/json/projectsData.json";
 
 // Icons
 import githubIcon from "@/../public/icon/github-icon.png"
 import backArrow from "@/../public/icon/arrow-back-circle.svg"
 import nextArrow from "@/../public/icon/arrow-next-circle.svg"
 
-// swiper
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import 'swiper/css'
+import { motion } from "framer-motion";
 import { useState } from "react";
-import { data } from "autoprefixer";
 
 export default function ProjectsSection({fontLexend}) {
-
-
     return(
-        <div className="w-full mx-auto p-10 sm:px-24 md:flex border-2 overflow-hidden border-black justify-between" >
+        <div className="w-full mx-auto p-10 sm:px-24 md:flex overflow-hidden justify-between" >
             <div className="w-full text-center md:text-left mx-auto" >
                 <div className={`md:text-left mx-auto text-center p-4 md:block sm:mt-7 text-black font-bold ${fontLexend}`}>
                     <motion.h1
@@ -34,10 +28,19 @@ export default function ProjectsSection({fontLexend}) {
                     My Projects
                     </motion.h1>
                 </div>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident error nobis quibusdam similique facere quia, dolor accusantium tempore sit voluptatem laudantium ratione. Sed dolorum illum, ex eos ab saepe facilis?</p>
-                <Link href={"/about"} >
-                    <HomeButton value="See More" background={"bg-gray-600"} textCol={"text-white"} bgHover="hover:bg-white" textHov={"hover:text-gray-600"} />
-                </Link>
+                <motion.div
+                    className='text-base py-2 sm:py-6 sm:text-xl text-gray-600 tracking-widest'
+                    initial={{ x: -100, opacity: 0 }}
+                    whileInView={{x: 0, opacity: 1}}
+                    transition={{delay: 0.4, type: "spring"}}
+                >
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident error nobis quibusdam similique facere quia, dolor accusantium tempore sit voluptatem laudantium ratione. Sed dolorum illum, ex eos ab saepe facilis?</p>
+                    <div className="py-2 sm:py-4">
+                        <Link href={"/about"} className="" >
+                            <HomeButton value="See More" background={"bg-gray-600"} textCol={"text-white"} bgHover="hover:bg-white" textHov={"hover:text-gray-600"} />
+                        </Link>
+                    </div>
+                </motion.div>
             </div>
             <div className="w-full items-center justify-center flex relative overflow-hidden" >
                 <ProjectCard data={dataProject.data} />
@@ -59,7 +62,7 @@ function ProjectCard({data}) {
     }
 
     return (
-        <div className={`w-fit relative gap-4 flex transition-all ease-in-out duration-500 md:rounded-2xl border-2 border-green-500`}>
+        <div className={`w-fit relative gap-4 flex transition-all ease-in-out duration-500 md:rounded-2xl`}>
             {
                 data.map((e, i) => (
                     <div key={i} className={`flex items-center w-full object-cover ${i === index ? "" : "hidden"}`}>

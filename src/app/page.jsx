@@ -1,9 +1,13 @@
 'use client'
-import AboutMeSection from '@/components/Sections/aboutMeSection';
+// Components
 import HomeSection from '@/components/Sections/homeSection';
+import AboutMeSection from '@/components/Sections/aboutMeSection';
 import ProjectsSection from '@/components/Sections/projectsSection';
-import ReactFullpage from '@fullpage/react-fullpage';
+import ContactSection from '@/components/Sections/contactSection';
 import { Lexend_Deca } from 'next/font/google';
+
+// framework
+import ReactFullpage from '@fullpage/react-fullpage';
 
 const lexendDeca = Lexend_Deca({
     weight: "800",
@@ -35,6 +39,9 @@ export default function HomePage() {
 							{/* <AboutMeSection fontLexend={lexendDeca.className} /> */}
 							<ProjectsSection fontLexend={lexendDeca.className} />
 						</div>
+						<div className='section'>
+							<ContactSection fontLexend={lexendDeca.className} />
+						</div>
 					</ReactFullpage.Wrapper>
 				)}
 				{...fullpageOptions}
@@ -42,13 +49,3 @@ export default function HomePage() {
 		</div>
 	);
 };
-
-// export default function Home() {
-
-//     return(
-//         <>
-//             <HomeSection fontLexend={lexendDeca.className} />
-//             <AboutMeSection fontLexend={lexendDeca.className} />
-//         </>
-//     )
-// }
