@@ -48,7 +48,7 @@ export default function ProjectsSection({fontLexend}) {
 
 
 function ProjectCard({data}) {
-    const [index, setIndex] = useState(0);
+    const [index, setIndex] = useState(1);
 
     const nextProjectHandler = () => {
         (index === data.length-1) ? setIndex(0) : setIndex(index+1);
@@ -59,14 +59,33 @@ function ProjectCard({data}) {
     }
 
     return (
-        <div className={`w-fit relative gap-4 flex transition-all ease-in-out duration-500 md:rounded-2xl p-6 md:p-0 border-2 border-green-500`}>
+        <div className={`w-fit relative gap-4 flex transition-all ease-in-out duration-500 md:rounded-2xl border-2 border-green-500`}>
             {
                 data.map((e, i) => (
                     <div key={i} className={`flex items-center w-full object-cover ${i === index ? "" : "hidden"}`}>
                         {/* prev button */}
-                        <div className="absolute left-0 z-10 w-8 sm:w-12 cursor-pointer" onClick={prevProjectHandler}>
+                        <motion.div 
+                            className="absolute left-0 z-10 w-8 sm:w-12 cursor-pointer" onClick={prevProjectHandler}
+                            initial={{scale: 1}}
+                            whileHover={{scale: 1.3}}
+                            whileTap={{scale: 1}}
+                        >
                            <Image className="w-full rounded-2xl" src={backArrow} width={30} height={30} alt="Next" />
-                        </div>
+                        </motion.div>
+
+                        {/* github icon */}
+                        <motion.div 
+                            className="absolute top-0 right-0 sm:w-14 w-10 z-10"
+                            initial={{x: 0, scale: 0, opacity: 0}}
+                            whileInView={{x: 0, scale: 1, opacity: 1}}
+                            transition={{delay: 0.5, type: "spring"}}
+                            whileHover={{scale: 1.2, transition: {delay: 0, type: "spring"}}}
+                        >
+                            <Link href={e.source}>
+                                <Image src={githubIcon} alt="githubIcon" width={50} height={50} />
+                            </Link>
+                        </motion.div>
+
                         <motion.div
                         className={`flex items-center w-full object-cover ${i === index ? "" : "hidden"}`}
                         key={i}
@@ -79,9 +98,14 @@ function ProjectCard({data}) {
                         </motion.div>
 
                         {/* next button */}
-                        <div className="absolute right-0 z-10 w-8 sm:w-12 cursor-pointer" onClick={nextProjectHandler} >
+                        <motion.div 
+                            className="absolute right-0 z-10 w-8 sm:w-12 cursor-pointer" onClick={nextProjectHandler} 
+                            initial={{scale: 1}}
+                            whileHover={{scale: 1.3}}
+                            whileTap={{scale: 1}}
+                        >
                             <Image className="w-full" src={nextArrow} width={30} height={30} alt="Next" />
-                        </div>
+                        </motion.div>
                     </div>
                 ))
             }
