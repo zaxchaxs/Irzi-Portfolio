@@ -62,7 +62,6 @@ export default function Navbar({isHomePage}) {
 
 					</motion.div>
 					<div className="sm:hidden items-center flex z-[50] px-10">
-						{/* <IconBtn source={contactIcon} /> */}
 						<HumbergerBtn isNavOpen={isNavOpen} onHumBtnClick={humbergerHandler} />
 					</div>
 					<div className="absolute top-0 h-screen" >
@@ -105,7 +104,7 @@ function HumbergerBtn({isNavOpen, onHumBtnClick}) {
     )
 }
 
-function NavItems({ isNavOpen, setIsNavOpen, onButtonClick}) {
+function NavItems({ isNavOpen, onButtonClick}) {
 	const navVariant = {
 		open: {
 			clipPath: `circle(1920px at calc(100% - 40px) 40px)`,
