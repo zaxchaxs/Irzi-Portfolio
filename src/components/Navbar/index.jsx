@@ -61,7 +61,7 @@ export default function Navbar({isHomePage}) {
 						<IconBtn source={contactIcon} delay={0.65} path={4} route={"/#contacts"} onIconClick={handlerMoveSection} />
 
 					</motion.div>
-					<div className="sm:hidden items-center flex z-[50] px-16">
+					<div className="sm:hidden items-center flex z-[50] px-10">
 						{/* <IconBtn source={contactIcon} /> */}
 						<HumbergerBtn isNavOpen={isNavOpen} onHumBtnClick={humbergerHandler} />
 					</div>
@@ -106,13 +106,6 @@ function HumbergerBtn({isNavOpen, onHumBtnClick}) {
 }
 
 function NavItems({ isNavOpen, setIsNavOpen, onButtonClick}) {
-	// const handleItemClick = (index) => {
-	// 	if(index) {
-	// 		fullpage_api.moveTo(index)
-	// 		fullpage_api.getActiveSection();
-	// 	}
-	// 	setIsNavOpen(false);
-	// };
 	const navVariant = {
 		open: {
 			clipPath: `circle(1920px at calc(100% - 40px) 40px)`,
@@ -142,7 +135,7 @@ function NavItems({ isNavOpen, setIsNavOpen, onButtonClick}) {
         },
     },
     navVariant.closed = {
-        clipPath: "circle(0px at calc(100% - 85px) 35px)",
+        clipPath: "circle(0px at calc(100% - 61px) 35px)",
         transition: {
             delay: 0.5,
             type: "spring",

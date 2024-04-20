@@ -96,9 +96,9 @@ function ProjectCard({data}) {
                         whileInView={{scale: 1, opacity: 1}}
                         transition={{type: "spring", bounce: 0.25}}
                         >
-                            <div className="w-full  -bottom-32 group-hover:bottom-0 transition-all ease-in-out duration-300 absolute h-1/4 bg-black z-10 rounded-t-2xl p-4 overflow-hidden bg-opacity-60">
+                            <div className="w-full bottom-0 sm:-bottom-32 group-hover:bottom-0 transition-all ease-in-out duration-300 absolute h-1/5 sm:h-1/4 bg-black z-10 rounded-t-xl sm:rounded-t-2xl p-2 px-4 sm:p-4 overflow-hidden bg-opacity-60">
                                 <div className="w-full text-slate-100">
-                                    <h1 className="font-bold text:lg sm:text-xl" >{e.title}</h1>
+                                    <h1 className="font-bold text-base sm:text-xl">{e.title}</h1>
                                     <p className="text-left" >{e.desc.length > 10 ? `${e.desc.slice(0, 64)}...` : e.desc}</p>
                                 </div>
                             </div>
