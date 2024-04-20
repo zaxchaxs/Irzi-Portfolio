@@ -78,7 +78,7 @@ function ProjectCard({data}) {
 
                         {/* github icon */}
                         <motion.div 
-                            className="absolute top-0 right-0 sm:w-14 w-10 z-10"
+                            className="absolute top-2 right-2 sm:w-14 w-8 z-10"
                             initial={{x: 0, scale: 0, opacity: 0}}
                             whileInView={{x: 0, scale: 1, opacity: 1}}
                             transition={{delay: 0.5, type: "spring"}}
@@ -90,15 +90,15 @@ function ProjectCard({data}) {
                         </motion.div>
 
                         <motion.div
-                        className={`flex items-center relative w-full object-cover group ${i === index ? "" : "hidden"}`}
+                        className={`flex items-center relative w-full object-cover group overflow-hidden ${i === index ? "" : "hidden"}`}
                         key={i}
                         initial={{scale: 0, opacity: 0}}
                         whileInView={{scale: 1, opacity: 1}}
                         transition={{type: "spring", bounce: 0.25}}
                         >
-                            <div className="w-full -bottom-32 group-hover:bottom-0 transition-all ease-in-out duration-300 absolute h-1/4 bg-black z-10 rounded-t-2xl p-4 overflow-hidden bg-opacity-60">
+                            <div className="w-full  -bottom-32 group-hover:bottom-0 transition-all ease-in-out duration-300 absolute h-1/4 bg-black z-10 rounded-t-2xl p-4 overflow-hidden bg-opacity-60">
                                 <div className="w-full text-slate-100">
-                                    <h1 className="font-bold text-xl" >{e.title}</h1>
+                                    <h1 className="font-bold text:lg sm:text-xl" >{e.title}</h1>
                                     <p className="text-left" >{e.desc.length > 10 ? `${e.desc.slice(0, 64)}...` : e.desc}</p>
                                 </div>
                             </div>
