@@ -90,14 +90,19 @@ function ProjectCard({data}) {
                         </motion.div>
 
                         <motion.div
-                        className={`flex items-center w-full object-cover ${i === index ? "" : "hidden"}`}
+                        className={`flex items-center relative w-full object-cover group ${i === index ? "" : "hidden"}`}
                         key={i}
                         initial={{scale: 0, opacity: 0}}
                         whileInView={{scale: 1, opacity: 1}}
                         transition={{type: "spring", bounce: 0.25}}
                         >
-                            {/* <img src={e.image} alt={e.title} className="w-[80vh] object-cover rounded-2xl min-w-[50vh]" /> */}
-                            <Image src={e.image} alt={e.title} width={400} height={266} className="w-[80vh] min-w-[70] object-cover rounded-2xl grayscale hover:grayscale-0 transition-all ease-in-out duration-300" placeholder="blur" blurDataURL={e.image} />
+                            <div className="w-full -bottom-32 group-hover:bottom-0 transition-all ease-in-out duration-300 absolute h-1/4 bg-black z-10 rounded-t-2xl p-4 overflow-hidden bg-opacity-60">
+                                <div className="w-full text-slate-100">
+                                    <h1 className="font-bold text-xl" >{e.title}</h1>
+                                    <p className="text-left" >{e.desc.length > 10 ? `${e.desc.slice(0, 64)}...` : e.desc}</p>
+                                </div>
+                            </div>
+                            <Image src={e.image} alt={e.title} width={400} height={266} className="w-[80vh] min-w-[70] object-cover rounded-2xl grayscale group-hover:grayscale-0 transition-all ease-in-out duration-300" placeholder="blur" blurDataURL={e.image} />
                         </motion.div>
 
                         {/* next button */}
@@ -110,8 +115,9 @@ function ProjectCard({data}) {
                             <Image className="w-full" src={nextArrow} width={30} height={30} alt="Next" />
                         </motion.div>
 
+                        {/* Button */}
                         <motion.div
-                            className={`absolute z-10 bottom-4 left-4 sm:bottom-5 sm:left-8 ${e.preview ? "" : "hidden"}`}
+                            className={`absolute z-10 top-4 left-4 sm:top-5 sm:left-8 ${e.preview ? "" : "hidden"}`}
                             initial={{scale: 0, y: 0, opacity: 0}}
                             whileInView={{scale: 1, y: 0, opacity: 1, transition:{delay: 0.6, type: "spring"}}}
                             whileHover={{scale: 1.2}}
