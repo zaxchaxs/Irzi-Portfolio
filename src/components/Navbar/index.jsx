@@ -2,11 +2,11 @@
 import Image from "next/image"
 
 // icons
-import homeIcon from "@/../public/icon/home.svg" 
-import aboutIcon from "@/../public/icon/person-circle.svg"
-import projectsIcon from "@/../public/icon/project-icon.svg"
-import contactIcon from "@/../public/icon/mail.svg"
-import backArrow from "@/../public/icon/arrow-back.svg"
+import homeIcon from "@/../public/icons/home.svg" 
+import aboutIcon from "@/../public/icons/person-circle.svg"
+import projectsIcon from "@/../public/icons/project-icon.svg"
+import contactIcon from "@/../public/icons/mail.svg"
+import backArrow from "@/../public/icons/arrow-back.svg"
 
 import { useState } from "react"
 import { motion } from "framer-motion";

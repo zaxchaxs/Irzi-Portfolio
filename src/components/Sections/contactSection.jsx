@@ -1,10 +1,8 @@
-import HomeButton from "../Button/homeButton";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 import randomPict from "@/../public/img/randomPict/blueContactPict.jpeg"
-
 // Icons
 import emailIcon from "@/../public/icons/contacts/email-icon.png";
 import githubIcon from "@/../public/icons/contacts/github-icon.png";

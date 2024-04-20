@@ -7,9 +7,9 @@ import Image from "next/image";
 import dataProject from "@/../public/json/projectsData.json";
 
 // Icons
-import githubIcon from "@/../public/icon/github-icon.png"
-import backArrow from "@/../public/icon/arrow-back-circle.svg"
-import nextArrow from "@/../public/icon/arrow-next-circle.svg"
+import githubIcon from "@/../public/icons/github-icon.png"
+import backArrow from "@/../public/icons/arrow-back-circle.svg"
+import nextArrow from "@/../public/icons/arrow-next-circle.svg"
 
 import { motion } from "framer-motion";
 import { useState } from "react";
