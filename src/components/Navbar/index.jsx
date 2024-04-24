@@ -38,7 +38,7 @@ export default function Navbar({isHomePage}) {
 				<div className="relative flex justify-between">
 					<div className={`mx-6 text-3xl p-4 duration-500 relative ease-in-out z-[50] justify-center items-center flex ${isNavOpen ? "text-white" : "text-black" } `}>
 						<motion.div
-							className={`absolute -left-5 ${isHomePage || isNavOpen ? "hidden" : ""}`}
+							className={`absolute -left-7  ${isHomePage || isNavOpen ? "hidden" : ""}`}
 							initial={{scale: 1}}
 							whileHover={{scale: 1.2}}
 							whileTap={{scale: 1}}

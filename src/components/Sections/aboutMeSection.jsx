@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function AboutMeSection({fontLexend}) {
     return(
-        <div className="w-full mx-auto p-10 sm:px-24 pt-20 md:flex overflow-hidden relative" >
+        <div className="w-full  mx-auto p-10 sm:px-24 pt-20 md:flex overflow-hidden relative" >
             <div className="md:hidden absolute left-[30%] sm:left-[35%] sm:-top-8 -top-6 -z-10 items-center justify-center w-40 sm:w-56 p-2">
                 <PopCatGif isMobileWidth={true} />
             </div>
@@ -34,7 +34,7 @@ export default function AboutMeSection({fontLexend}) {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit officia ipsam provident, nostrum vero ipsa soluta veritatis voluptatem quisquam excepturi libero, aliquam vel maiores quis esse, voluptas in a totam?</p>
                     <div className='p-4 flex justify-center items-center md:block'>
                     <Link href={"/about"} >
-                        <HomeButton value="Learn More" background={"bg-gray-600"} textCol={"text-white"} bgHover="hover:bg-white" textHov={"hover:text-gray-600"} />
+                        <HomeButton value="Learn More" background={"bg-gray-600"} textCol={"text-white"} bgHover="hover:bg-gray-200" textHov={"hover:text-gray-600"} />
                     </Link>
                     </div>
                 </motion.div>

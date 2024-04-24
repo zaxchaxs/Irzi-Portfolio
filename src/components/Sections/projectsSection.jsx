@@ -37,7 +37,7 @@ export default function ProjectsSection({fontLexend}) {
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident error nobis quibusdam similique facere quia, dolor accusantium tempore sit voluptatem laudantium ratione. Sed dolorum illum, ex eos ab saepe facilis?</p>
                     <div className="py-2 sm:py-4">
                         <Link href={"/projects"} className="" >
-                            <HomeButton value="See More" background={"bg-gray-600"} textCol={"text-white"} bgHover="hover:bg-white" textHov={"hover:text-gray-600"} />
+                            <HomeButton value="See More" background={"bg-gray-600"} textCol={"text-white"} bgHover="hover:bg-gray-200" textHov={"hover:text-gray-600"} />
                         </Link>
                     </div>
                 </motion.div>
@@ -122,7 +122,7 @@ function ProjectCard({data}) {
                             whileInView={{scale: 1, y: 0, opacity: 1, transition:{delay: 0.6, type: "spring"}}}
                             whileHover={{scale: 1.2}}
                         >
-                            <div className="cursor-pointer bg-gray-600 text-white font-bold p-1 px-2 sm:p-1 sm:px-4 text-xxs sm:text-sm rounded-lg sm:rounded-xl border-2 border-gray-600 hover:bg-white hover:text-gray-600 ease-in-out duration-300">
+                            <div className="cursor-pointer bg-gray-600 text-white font-bold p-1 px-2 sm:p-1 sm:px-4 text-xxs sm:text-sm rounded-lg sm:rounded-xl border-2 border-gray-600 hover:bg-gray-200 hover:text-gray-600 ease-in-out duration-300">
                                 <Link href={e.preview ? e.preview : "#" } target="blank">
                                     Preview
                                 </Link>

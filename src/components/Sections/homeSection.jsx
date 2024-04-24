@@ -56,13 +56,13 @@ export default function HomeSection({fontLexend}) {
                     </div>
                     <div className='p-2 sm:p-4 flex justify-center items-center md:justify-start'>
                         <Link href={"/docs/testing.pdf"}>
-                            <HomeButton value="Download CV" background={"bg-gray-600"} textCol={"text-white"}       bgHover="hover:bg-white" textHov={"hover:text-gray-600"} />
+                            <HomeButton value="Download CV" background={"bg-gray-600"} textCol={"text-white"}       bgHover="hover:bg-gray-200" textHov={"hover:text-gray-600"} />
                         </Link>
                         <div onClick={() => {
                             fullpage_api.moveTo(4);
                             fullpage_api.getActiveSection();
                             }}>
-                            <HomeButton value="Contact Me" background='bg-white' textCol="text-gray-600" bgHover={"hover:bg-gray-600"} textHov={"hover:text-white"} />
+                            <HomeButton value="Contact Me" background='bg-gray-200' textCol="text-gray-600" bgHover={"hover:bg-gray-600"} textHov={"hover:text-white"} />
                         </div>
                     </div>
                 </motion.div>
