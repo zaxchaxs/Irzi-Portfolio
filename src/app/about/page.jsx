@@ -22,7 +22,7 @@ export default function AboutPage() {
 
                 {/* Image large width */}
                 <motion.div
-                    className={`border-2 border-red-500 relative hidden lg:block w-3/4 h-[100vh]`}
+                    className={`relative hidden lg:block w-3/4 h-[100vh]`}
                     initial={{opacity: 0, scale: 0.8}}
                     whileInView={{opacity: 1, scale: 1}}
                     transition={{delay: 0.3, type:"spring"}}
@@ -30,12 +30,12 @@ export default function AboutPage() {
                     <Image src={mySelfPict1} layout="fill" placeholder="blur" alt="Irzi Rahmatullah" objectFit="cover" className="grayscale hover:grayscale-0 duration-300 ease-in-out placeholder:blur min-w-full object-cover" />
 
                     <motion.div
-                        className={`mx-auto text-center absolute bottom-5 p-2 px-6 md:rounded-2xl lg:rounded-3xl bg-gray-200 bg-opacity-50`}
+                        className={`mx-auto text-center absolute left-8 bottom-5 p-2 px-6 rounded-2xl bg-gray-200 bg-opacity-50`}
                         initial={{x: -100, opacity: 0}}
                         whileInView={{x:0, opacity: 1}}
                         transition={{delay: 0.7, type:"spring"}}
                     >
-                        <h1 className={`text-3xl md:text-4xl lg:text-5xl text-black ${lexendDeca.className} font-bold`}>About Me</h1>
+                        <h1 className={`text-5xl text-black ${lexendDeca.className} font-bold`}>About Me</h1>
                     </motion.div>
                 </motion.div>
 
@@ -63,7 +63,7 @@ export default function AboutPage() {
                     </motion.div>
                     <div className="px-4">
                         <motion.h1
-                            className={`text-lg sm:text-xl md:text-2xl text-black ${lexendDeca.className} `}
+                            className={`text-xl sm:text-xl md:text-3xl text-black ${lexendDeca.className} `}
                             initial={{x: -100, opacity: 0}}
                             whileInView={{x: 0, opacity: 1}}
                             transition={{delay: 0.5, type: "spring"}}
@@ -81,7 +81,7 @@ export default function AboutPage() {
                             Irzi Rahmatullah
                         </motion.h1>
                         <motion.p
-                            className={`text-base sm:text-lg text-justify indent-8`}
+                            className={`text-base sm:text-lg md:text-xl text-justify indent-8`}
                             initial={{x: -100, opacity: 0}}
                             whileInView={{x: 0, opacity: 1}}
                             transition={{delay: 0.7, type: "spring"}}
@@ -93,40 +93,43 @@ export default function AboutPage() {
                     </div>
                 </div>
             </div>
-            <div className="w-full py-5" >
-                <div>
+
+            <div className="w-full py-5 lg:py-20" >
+                <div className="py-10 sm:py-16 md:py-20">
+
+                    {/* Skill */}
                     <motion.h1
-                        className={`text-2xl text-black ${lexendDeca.className} w-full text-center`}
+                        className={`text-2xl text-black ${lexendDeca.className} w-full text-center sm:text-3xl md:text-5xl`}
                         initial={{y: -100, opacity: 0}}
                         whileInView={{y: 0, opacity: 1}}
                         transition={{delay: 0.3, type:"spring"}}
                     >
                         Skilled In
                     </motion.h1>
-
-                    {/* Skill */}
-                    <div className="p-4">
+                    <div className="p-4 sm:flex justify-between items-center pb-10 sm:py-8 md:py-10 gap-5">
                         <motion.div
-                            className="pb-2"
+                            className="py-2 text-gray-700 md:py-5"
                             initial={{x: -100, opacity: 0}}
                             whileInView={{x: 0, opacity: 1}}
                             transition={{delay: 0.3, type:"spring"}}
                         >
-                            <h1 className="text-center text-lg font-bold text-gray-700">Language & Framework</h1>
-                            <p className="pt-2 text-justify text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptate odit suscipit nisi ut ex veritatis natus error deserunt hic, autem rem neque porro debitis iste amet praesentium molestiae. Dolorem?</p>
+                            <h1 className="text-center text-lg font-bold sm:text-xl md:text-2xl">Language & Framework</h1>
+                            <p className="pt-2 text-center text-base sm:text-lg md:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptate odit suscipit nisi ut ex veritatis natus error deserunt hic, autem rem neque porro debitis iste amet praesentium molestiae. Dolorem?</p>
                         </motion.div>
                         <motion.div
+                                className="text-gray-700"
                                 initial={{x: 100, opacity: 0}}
                                 whileInView={{x: 0, opacity: 1}}
                                 transition={{delay: 0.3, type:"spring"}}
                             >
-                                <h1 className="text-center text-lg font-bold text-gray-700">Tools</h1>
-                                <p className="pt-2 text-justify text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptate odit suscipit nisi ut ex veritatis natus error deserunt hic, autem rem neque porro debitis iste amet praesentium molestiae. Dolorem?</p>
+                                <h1 className="text-center text-lg font-bold sm:text-xl md:text-2xl">Tools</h1>
+                                <p className="pt-2 text-center text-base sm:text-lg md:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptate odit suscipit nisi ut ex veritatis natus error deserunt hic, autem rem neque porro debitis iste amet praesentium molestiae. Dolorem?</p>
                         </motion.div>
                     </div>
 
+                    {/* Education */}
                     <motion.h1
-                        className={`text-2xl text-black ${lexendDeca.className} w-full text-center`}
+                        className={`text-2xl text-black ${lexendDeca.className} w-full text-center sm:text-3xl md:text-5xl`}
                         initial={{y: -100, opacity: 0}}
                         whileInView={{y: 0, opacity: 1}}
                         transition={{delay: 0.3, type:"spring"}}
@@ -134,16 +137,16 @@ export default function AboutPage() {
                         Education
                     </motion.h1>
                     {/* Education */}
-                    <div className="p-4">
+                    <div className="p-4 sm:py-8 md:py-5">
                         <motion.div
-                                className="pb-2"
+                                className="py-2 md:py-5"
                                 initial={{x: -100, opacity: 0}}
                                 whileInView={{x: 0, opacity: 1}}
                                 transition={{delay: 0.3, type:"spring"}}
                             >
-                                <h1 className="text-center text-lg font-bold text-gray-700">Universitas Singaperbangsa Karawang</h1>
-                                <p className="py-2 text-gray-700 font-bold">Computer Science | 2023 - Now</p>
-                                <p className="text-justify text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptate odit suscipit nisi ut ex veritatis natus error deserunt hic, autem rem neque porro debitis iste amet praesentium molestiae. Dolorem?</p>
+                                <h1 className="text-center text-lg font-bold text-gray-700 sm:text-xl md:text-2xl">Universitas Singaperbangsa Karawang</h1>
+                                <p className="py-2 text-gray-700 font-bold md:text-xl">Computer Science | 2023 - Now</p>
+                                <p className="text-justify text-gray-700 text-base sm:text-lg md:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptate odit suscipit nisi ut ex veritatis natus error deserunt hic, autem rem neque porro debitis iste amet praesentium molestiae. Dolorem?</p>
                         </motion.div>
                     </div>
                 </div>

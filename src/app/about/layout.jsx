@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Layout({ children }) {
     return(
-        <div className={`min-h-screen relative `}>
+        <div className={`min-h-screen relative scroll-smooth`}>
           <Navbar isHomePage={false} />
           {children}
         </div>
