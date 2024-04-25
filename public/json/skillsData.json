@@ -1,0 +1,70 @@
+{
+    "language": [
+        {
+            "skillful": true,
+            "name": "JavaScript"
+        },
+        {
+            "skillful": false,
+            "name": "C++"
+        },
+        {
+            "skillful": true,
+            "name": "NodeJS"
+        },
+        {
+            "skillful": true,
+            "name": "HTML"
+        },
+        {
+            "skillful": true,
+            "name": "CSS"
+        },
+        {
+            "skillful": true,
+            "name": "TailwindCSS"
+        },
+        {
+            "skillful": false,
+            "name": "React"
+        },
+        {
+            "skillful": false,
+            "name": "NextJS"
+        },
+        {
+            "skillful": false,
+            "name": "MySQL"
+        },
+        {
+            "skillful": true,
+            "name": "Bootstrap"
+        },
+        {
+            "skillful": true,
+            "name": "Problem Solving"
+        }
+    ],
+    "tools": [
+        {
+            "skillful" : true,
+            "name": "Visual Studio Code"
+        },
+        {
+            "skillful" : true,
+            "name": "Github"
+        },
+        {
+            "skillful" : true,
+            "name": "Git"
+        },
+        {
+            "skillful" : false,
+            "name": "Postman"
+        },
+        {
+            "skillful" : true,
+            "name": "Figma"
+        }
+    ]
+}

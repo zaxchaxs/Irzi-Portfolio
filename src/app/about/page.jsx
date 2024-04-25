@@ -4,6 +4,8 @@ import Image from "next/image"
 import { motion } from "framer-motion";
 import { Lexend_Deca } from 'next/font/google';
 
+import skillsData from "@/../public/json/skillsData.json";
+
 // images
 import mySelfPict1 from "@/../public/img/myself2.jpg"
 import mySelfPict1Copy from "@/../public/img/myself2copy.jpg"
@@ -108,13 +110,20 @@ export default function AboutPage() {
                     </motion.h1>
                     <div className="p-4 sm:flex justify-between items-center pb-10 sm:py-8 md:py-10 gap-5">
                         <motion.div
-                            className="py-2 text-gray-700 md:py-5"
+                            className="py-2 text-gray-700 md:py-5 w-full"
                             initial={{x: -100, opacity: 0}}
                             whileInView={{x: 0, opacity: 1}}
                             transition={{delay: 0.3, type:"spring"}}
                         >
                             <h1 className="text-center text-lg font-bold sm:text-xl md:text-2xl">Language & Framework</h1>
-                            <p className="pt-2 text-center text-base sm:text-lg md:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptate odit suscipit nisi ut ex veritatis natus error deserunt hic, autem rem neque porro debitis iste amet praesentium molestiae. Dolorem?</p>
+                            {/* <p className="pt-2 text-center text-base sm:text-lg md:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptate odit suscipit nisi ut ex veritatis natus error deserunt hic, autem rem neque porro debitis iste amet praesentium molestiae. Dolorem?</p> */}
+                            <p className="pt-2 text-center text-base sm:text-lg md:text-xl">
+                            {
+                            skillsData.language.map(e => {
+                                return e.skillful ? `<strong>| ${e.name} |</strong>` : `| ${e.name} |`
+                            })
+                            }
+                            </p>
                         </motion.div>
                         <motion.div
                                 className="text-gray-700"
