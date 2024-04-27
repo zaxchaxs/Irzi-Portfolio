@@ -102,8 +102,8 @@ export default function AboutPage() {
                     {/* Skill */}
                     <motion.h1
                         className={`text-2xl text-black ${lexendDeca.className} w-full text-center sm:text-3xl md:text-5xl`}
-                        initial={{y: -100, opacity: 0}}
-                        whileInView={{y: 0, opacity: 1}}
+                        initial={{scale: 0, opacity: 0}}
+                        whileInView={{scale: 1, opacity: 1}}
                         transition={{delay: 0.3, type:"spring"}}
                     >
                         Skilled In
@@ -116,31 +116,33 @@ export default function AboutPage() {
                             transition={{delay: 0.3, type:"spring"}}
                         >
                             <h1 className="text-center text-lg font-bold sm:text-xl md:text-2xl">Language & Framework</h1>
-                            {/* <p className="pt-2 text-center text-base sm:text-lg md:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptate odit suscipit nisi ut ex veritatis natus error deserunt hic, autem rem neque porro debitis iste amet praesentium molestiae. Dolorem?</p> */}
                             <p className="pt-2 text-center text-base sm:text-lg md:text-xl">
                             {
-                            skillsData.language.map(e => {
-                                return e.skillful ? `<strong>| ${e.name} |</strong>` : `| ${e.name} |`
-                            })
+                                skillsData.language.map(e => e.skillful ? <>| <b>{e.name}</b> | </> : <>| {e.name} | </>)
                             }
                             </p>
                         </motion.div>
                         <motion.div
-                                className="text-gray-700"
+                                className="text-gray-700 w-full"
                                 initial={{x: 100, opacity: 0}}
                                 whileInView={{x: 0, opacity: 1}}
                                 transition={{delay: 0.3, type:"spring"}}
                             >
                                 <h1 className="text-center text-lg font-bold sm:text-xl md:text-2xl">Tools</h1>
-                                <p className="pt-2 text-center text-base sm:text-lg md:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptate odit suscipit nisi ut ex veritatis natus error deserunt hic, autem rem neque porro debitis iste amet praesentium molestiae. Dolorem?</p>
+                                <p className="pt-2 text-center text-base sm:text-lg md:text-xl">
+                                {
+                                    skillsData.tools.map(e => e.skillful ? <>| <b>{e.name}</b> | </> : <>| {e.name} | </>)
+                                }
+                                </p>
+                                
                         </motion.div>
                     </div>
 
                     {/* Education */}
                     <motion.h1
                         className={`text-2xl text-black ${lexendDeca.className} w-full text-center sm:text-3xl md:text-5xl`}
-                        initial={{y: -100, opacity: 0}}
-                        whileInView={{y: 0, opacity: 1}}
+                        initial={{scale: 0, opacity: 0}}
+                        whileInView={{scale: 1, opacity: 1}}
                         transition={{delay: 0.3, type:"spring"}}
                     >
                         Education
