@@ -1,7 +1,11 @@
+
+// Components
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import DoubleUnderline from '../Underlines/doubleUnderline';
 
+
+import { motion } from "framer-motion";
 import randomPict from "@/../public/img/randomPict/blueContactPict.jpeg"
 // Icons
 import emailIcon from "@/../public/icons/contacts/email-icon.png";
@@ -24,7 +28,7 @@ export default function ContactSection({fontLexend}) {
                 <Image src={randomPict} height={500} width={500} alt="random pict" className="z-0 grayscale hover:grayscale-0 h-[40vh] w-full md:h-auto object-fill transition-all ease-in-out duration-300 rounded-md" />
             </motion.div>
             <div className="md:p-4 p-2 w-full z-10 relative -mt-12 sm:-mt-14 md:mt-0 ">
-                <div className={`flex md:block justify-center md:text-left text-center md:p-4 md:mt-0 text-black font-bold ${fontLexend}`} >
+                <div className={`flex md:block justify-center mx-auto md:mx-0 w-fit md:text-left text-center md:p-4 md:mt-0 text-black font-bold ${fontLexend}`} >
                     <motion.h1
                         className='text-2xl sm:text-4xl md:text-6xl bg-slate-200 w-fit px-6 rounded-md bg-opacity-60 md:bg-transparent '
                         initial={{ x: 100, opacity: 0 }}
@@ -33,6 +37,7 @@ export default function ContactSection({fontLexend}) {
                     >
                     Let's Connect
                     </motion.h1>
+                    <DoubleUnderline isContactSec={true} />
                 </div>
                 <div className='w-full text-base py-2 sm:py-6 px-8 text-center md:text-left sm:text-xl text-gray-600 tracking-widest'>
                     <motion.p

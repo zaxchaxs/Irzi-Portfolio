@@ -5,6 +5,7 @@ import HomeButton from "../Button/homeButton";
 import Link from "next/link";
 import Image from "next/image";
 import dataProject from "@/../public/json/projectsData.json";
+import DoubleUnderline from '../Underlines/doubleUnderline';
 
 // Icons
 import githubIcon from "@/../public/icons/github-icon.png"
@@ -18,7 +19,7 @@ export default function ProjectsSection({fontLexend}) {
     return(
         <div className="w-full mx-auto p-10 sm:px-24 md:flex overflow-hidden justify-between" >
             <div className="w-full text-center md:text-left mx-auto" >
-                <div className={`md:text-left mx-auto text-center p-4 md:block sm:mt-7 text-black font-bold ${fontLexend}`}>
+                <div className={`md:text-left mx-auto md:mx-0 w-fit text-center p-4 md:block sm:mt-7 text-black font-bold ${fontLexend}`}>
                     <motion.h1
                         className='text-4xl md:text-5xl sm:text-6xl'
                         initial={{ x: -100, opacity: 0 }}
@@ -27,6 +28,7 @@ export default function ProjectsSection({fontLexend}) {
                     >
                     My Projects
                     </motion.h1>
+                    <DoubleUnderline />
                 </div>
                 <motion.div
                     className='text-base py-2 sm:py-6 sm:text-xl text-gray-600 tracking-widest'

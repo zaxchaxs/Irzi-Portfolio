@@ -1,7 +1,11 @@
 'use client'
+
+// compo
 import Image from "next/image"
 import HomeButton from "../Button/homeButton";
 import Link from "next/link";
+import DoubleUnderline from '../Underlines/doubleUnderline';
+
 import blueRandomPict from "@/../public/img/randomPict/giphy.gif"
 import { motion } from "framer-motion";
 
@@ -15,7 +19,7 @@ export default function AboutMeSection({fontLexend}) {
                 <PopCatGif isMobileWidth={false} />
             </div>
             <div className="p-2 w-full" >
-                <div className={`md:text-left mx-auto text-center p-4 md:block sm:mt-7 text-black font-bold ${fontLexend}`}>
+                <div className={`md:text-left mx-auto md:mx-0 w-fit text-center p-4 md:block sm:mt-7 text-black font-bold ${fontLexend}`}>
                     <motion.h1
                         className='text-4xl sm:text-6xl'
                         initial={{ x: -100, opacity: 0 }}
@@ -24,6 +28,7 @@ export default function AboutMeSection({fontLexend}) {
                     >
                     About Me
                     </motion.h1>
+                    <DoubleUnderline />
                 </div>
                 <motion.div 
                     className='text-base py-2 sm:py-6 text-center sm:text-left sm:text-xl text-gray-600 tracking-widest'
