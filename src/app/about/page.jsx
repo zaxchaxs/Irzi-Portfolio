@@ -149,6 +149,7 @@ export default function AboutPage() {
                     >
                         Education
                     </motion.h1>
+                    <SingleUnderline />
                     {/* Education */}
                     <div className="p-4 sm:py-8 md:py-5">
                         <motion.div

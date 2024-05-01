@@ -2,14 +2,14 @@
 import { motion } from "framer-motion";
 
 
-export default function SingleUnderline({isContactSec}) {
+export default function SingleUnderline() {
     return (
-        <div className={`p-2 mx-auto items-center flex justify-center`}>
+        <div className={`p-2 md:p-4 w-2/3 md:w-1/2 lg:w-1/3 mx-auto items-center flex justify-center`}>
             <motion.div
-                className="w-1/2 h-[5px] bg-black border-2 border-black rounded-md"
-                initial={{x: -100, opacity: 0}}
-                whileInView={{x: 0, opacity: 1}}
-                transition={{type: "spring", delay: 0.8}}
+                className="md:h-[5px] h-[3px] bg-black border-2 border-black rounded-full"
+                initial={{width: 0,}}
+                whileInView={{width: "80%"}}
+                transition={{type: "spring", delay: 0.7}}
                 ></motion.div>
         </div>
     )
