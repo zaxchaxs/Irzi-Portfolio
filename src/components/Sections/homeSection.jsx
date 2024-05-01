@@ -1,6 +1,10 @@
 'use client'
-import Image from "next/image"
+
+// Compo
 import HomeButton from '@/components/Button/homeButton';
+import Image from "next/image"
+import DoubleUnderline from '../Underlines/doubleUnderline';
+
 import Link from "next/link";
 import { motion } from "framer-motion";
 import mySelf from "../../../public/img/myself.jpg"
@@ -29,7 +33,7 @@ export default function HomeSection({fontLexend}) {
                     IRZI RAHMATULLAH
                     </motion.h1>
                 </div>
-                <div className={`md:text-left mx-auto w-full text-center p-4 m-4 md:block sm:mt-7  text-black font-bold ${fontLexend}`}>
+                <div className={`md:text-left mx-auto md:mx-0 w-fit text-center p-4 m-4 md:block sm:mt-7  text-black font-bold ${fontLexend}`}>
                     <motion.h1
                         className='text-4xl sm:text-6xl'
                         initial={{ x: -100, opacity: 0 }}
@@ -44,6 +48,7 @@ export default function HomeSection({fontLexend}) {
                         transition={{delay: 0.3, type: "spring"}}
                     >{`Developer`}
                     </motion.h1>
+                    <DoubleUnderline />
                 </div>
                 <motion.div 
                     className='text-base text-center sm:text-left sm:text-xl text-gray-600 tracking-widest'
