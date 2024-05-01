@@ -9,6 +9,7 @@ import skillsData from "@/../public/json/skillsData.json";
 // images
 import mySelfPict1 from "@/../public/img/myself2.jpg"
 import mySelfPict1Copy from "@/../public/img/myself2copy.jpg"
+import SingleUnderline from "@/components/Underlines/singleUnderline";
 
 
 const lexendDeca = Lexend_Deca({
@@ -97,7 +98,7 @@ export default function AboutPage() {
             </div>
 
             <div className="w-full py-5 lg:py-20" >
-                <div className="py-10 sm:py-16 md:py-20">
+                <div className="py-10 sm:py-16 md:py-20 border-2 border-black">
 
                     {/* Skill */}
                     <motion.h1
@@ -108,6 +109,7 @@ export default function AboutPage() {
                     >
                         Skilled In
                     </motion.h1>
+                    <SingleUnderline />
                     <div className="p-4 sm:flex justify-between items-center pb-10 sm:py-8 md:py-10 gap-5">
                         <motion.div
                             className="py-2 text-gray-700 md:py-5 w-full"
