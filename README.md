@@ -7,4 +7,5 @@ This portfolio website project is one of my learning outcomes about NextJS. By u
 ## Reference
 - https://github.com/Alvalens/Alvalens-porto-2-nextJs
 
-## This project is licensed under the GPL-3.0 License seethe [LICENSE](LICENSE) file for details.
+## License
+This project is licensed under the GPL-3.0 License. See the [LICENSE](LICENSE) file for details.
