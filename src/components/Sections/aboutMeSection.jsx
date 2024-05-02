@@ -36,7 +36,7 @@ export default function AboutMeSection({fontLexend}) {
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{delay: 0.4, type: "spring"}}
                 >
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit officia ipsam provident, nostrum vero ipsa soluta veritatis voluptatem quisquam excepturi libero, aliquam vel maiores quis esse, voluptas in a totam?</p>
+                    <p>I have an interest in Software Engineering, especially Web Development.</p>
                     <div className='p-4 flex justify-center items-center md:block'>
                     <Link href={"/about"} >
                         <HomeButton value="Learn More" background={"bg-gray-600"} textCol={"text-white"} bgHover="hover:bg-gray-200" textHov={"hover:text-gray-600"} />

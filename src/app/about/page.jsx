@@ -88,17 +88,17 @@ export default function AboutPage() {
                             initial={{x: -100, opacity: 0}}
                             whileInView={{x: 0, opacity: 1}}
                             transition={{delay: 0.7, type: "spring"}}
-                        >
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore magni deserunt fugit veritatis quidem vel delectus voluptatum harum mollitia tempora architecto incidunt, ab ratione, eum sequi est, labore nisi doloribus?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nemo magnam laudantium odio expedita nobis consequuntur mollitia voluptas quos vero. Tempore ullam blanditiis quisquam minus obcaecati voluptatibus magnam perspiciatis veritatis.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae doloribus reiciendis odio mollitia quidem dolore vel doloremque nam! Asperiores nobis error mollitia maxime, quaerat aperiam recusandae sint aliquam minus corrupti.
+                        >   
+                            Hi! I'm Irzi Rahmatullah. I'm from Bogor and currently doing my thing at Singaperbangsa University Karawang. Yep, I'm diving into the world of IT, majoring in Computer Science. That's why I'm all about tech, especially software engineering.
+                            I'm really into coding. It's like my go-to thing. Ever since I started messing around with code, I've been hooked. I've got a knack for problem-solving with lines of code, turning ideas into reality. Whether it's building websites, creating apps, or digging into data, coding is where I shine. It's not just a skill for me, it's something I'm passionate about and something I love to do.
+                            I believe that every project is an opportunity to learn and grow, and I am always excited to embrace new challenges.
                         </motion.p>
                     </div>
                 </div>
             </div>
 
             <div className="w-full py-5 lg:py-20" >
-                <div className="py-10 sm:py-16 md:py-20 border-2 border-black">
+                <div className="py-10 sm:py-16 md:py-20">
 
                     {/* Skill */}
                     <motion.h1
@@ -160,7 +160,7 @@ export default function AboutPage() {
                             >
                                 <h1 className="text-center text-lg font-bold text-gray-700 sm:text-xl md:text-2xl">Universitas Singaperbangsa Karawang</h1>
                                 <p className="py-2 text-gray-700 font-bold md:text-xl">Computer Science | 2023 - Now</p>
-                                <p className="text-justify text-gray-700 text-base sm:text-lg md:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptate odit suscipit nisi ut ex veritatis natus error deserunt hic, autem rem neque porro debitis iste amet praesentium molestiae. Dolorem?</p>
+                                <p className="text-justify text-gray-700 text-base sm:text-lg md:text-xl">Currently, I'm in my second semester at Singaperbangsa University Karawang, majoring in Computer Science. During my time there, I've had loads of opportunities to dive into new tech stuff. It's been all about honing my problem-solving skills, leveling up my programming game, boosting my web development skills, and a whole lot more.</p>
                         </motion.div>
                     </div>
                 </div>

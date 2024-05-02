@@ -36,7 +36,8 @@ export default function ProjectsSection({fontLexend}) {
                     whileInView={{x: 0, opacity: 1}}
                     transition={{delay: 0.4, type: "spring"}}
                 >
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident error nobis quibusdam similique facere quia, dolor accusantium tempore sit voluptatem laudantium ratione. Sed dolorum illum, ex eos ab saepe facilis?</p>
+                    {/* <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident error nobis quibusdam similique facere quia, dolor accusantium tempore sit voluptatem laudantium ratione. Sed dolorum illum, ex eos ab saepe facilis?</p> */}
+                    <p>Here are some projects I've whipped up over time. Feel free to check out the source code on my GitHub.</p>
                     <div className="py-2 sm:py-4">
                         <Link href={"/projects"} className="" >
                             <HomeButton value="See More" background={"bg-gray-600"} textCol={"text-white"} bgHover="hover:bg-gray-200" textHov={"hover:text-gray-600"} />

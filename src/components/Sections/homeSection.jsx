@@ -56,8 +56,8 @@ export default function HomeSection({fontLexend}) {
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{delay: 0.4, type: "spring"}}
                 >
-                    <div className='py-4 sm:py-6'>
-                        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit officia ipsam provident, nostrum vero ipsa soluta veritatis voluptatem quisquam excepturi libero, aliquam vel maiores quis esse, voluptas in a totam?</h1>
+                    <div className='py-4'>
+                        <p>Hi! I am a student at one of the state universities, Universitas Singaperbangsa Karawang. I am a junior fullstack web developer. I am love to exploring the latest technologies and learning about new ways to improve my skills.</p>
                     </div>
                     <div className='p-2 sm:p-4 flex justify-center items-center md:justify-start'>
                         <Link href={"/docs/testing.pdf"}>

@@ -17,7 +17,7 @@ const lexendDeca = Lexend_Deca({
 
 export default function HomePage() {
 	const fullpageOptions = {
-		anchors: ["home", "about", "projects", "contact"],
+		anchors: ["home", "about", "projects", "contacts"],
 		scrollingSpeed: 1000,
 		licenseKey: "gplv3-license",
 		menu: "#sidebar",
