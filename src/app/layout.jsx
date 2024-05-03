@@ -16,7 +16,7 @@ export const metadata = {
 export default function Layout({ children }) {
   return (
     <html lang="en">
-      <body className={"bg-gray-200  " + jost.className}>
+      <body className={"bg-gray-200 scroll-smooth " + jost.className}>
         <div className='min-h-screen relative'>
           <Navbar isHomePage={true} />
           {children}
