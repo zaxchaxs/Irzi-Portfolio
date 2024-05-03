@@ -12,7 +12,7 @@ import mySelf from "../../../public/img/myself.jpg"
 
 export default function HomeSection({fontLexend}) {
     return (
-      <div className="p-10 sm:px-24 mx-auto pt-20 md:flex justify-between overflow-hidden">
+      <div className="p-10 sm:px-24 mx-auto py-20 md:flex justify-between overflow-hidden">
         <motion.div
           className=" md:hidden items-center justify-center flex"
           initial={{ y: -100, opacity: 0 }}
@@ -35,7 +35,7 @@ export default function HomeSection({fontLexend}) {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.1, type: "spring" }}
             >
-              IRZIRAHMATULLAH
+              IRZI RAHMATULLAH
             </motion.h1>
           </div>
           <div
