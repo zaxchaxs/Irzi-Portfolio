@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Lexend_Deca } from 'next/font/google';
 import dataProject from "@/../public/json/projectsData.json";
 import ProjectCard from "@/components/ProjectCards";
+import Link from "next/link";
 
 const lexendDeca = Lexend_Deca({
     weight: "800",
@@ -15,7 +16,7 @@ export default function ProjectsPage() {
       <div className="p-10 sm:px-24 mx-auto pt-20 overflow-hidden">
         <div className="w-full">
           <motion.div
-            className={`text-2xl text-black ${lexendDeca.className} text-center p-2 border-2 border-black w-full`}
+            className={`text-2xl text-black ${lexendDeca.className} text-center p-2 w-full`}
             initial={{ y: -100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ type: "spring", delay: 0.3 }}
@@ -23,7 +24,7 @@ export default function ProjectsPage() {
             <h1>My Projects</h1>
           </motion.div>
           <motion.div
-            className="text-base p-2 border-2 border-black text-justify"
+            className="text-base p-2 text-justify"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ type: "spring", delay: 0.5 }}
@@ -44,6 +45,11 @@ export default function ProjectsPage() {
             {
                 dataProject.data.map(e => <ProjectCard key={e.id} title={e.title} desc={e.desc} tech={e.tech} srcCode={e.source} srcImg={e.image} year={e.year} />)
             }
+        </div>
+        <div className="w-full flex justify-center py-10">
+            <div className={`w-fit my-4 p-2 text-base ${lexendDeca.className} underline shadow-xl rounded-md`}>
+                <Link href={"https://github.com/zaxchaxs"} target="blank">See More Projects I've Created</Link>
+            </div>
         </div>
       </div>
     );
