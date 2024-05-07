@@ -14,7 +14,7 @@
             "id": 2,
             "title": "Irzi | First Portfolio",
             "desc": "My first portfolio website created only using Tailwind CSS and Vanilla JavaScript.",
-            "tech": ["Tailwind", "JavaScript"],
+            "tech": ["TailwindCSS", "JavaScript"],
             "source": "https://github.com/zaxchaxs/IrziRahmatullah-Portfolio",
             "preview": "https://zaxchaxs.github.io/IrziRahmatullah-Portfolio/public/",
             "image": "/img/projectsImage/firstPortfolio.jpg",
