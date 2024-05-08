@@ -139,7 +139,7 @@ export default function AboutPage() {
             <SingleUnderline />
             <div className="p-4 sm:flex justify-between items-center pb-10 sm:py-8 md:py-10 gap-5">
               <motion.div
-                className="py-2 text-gray-700 md:py-5 w-full"
+                className="py-4 text-gray-700 md:py-5 w-full"
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.3, type: "spring" }}

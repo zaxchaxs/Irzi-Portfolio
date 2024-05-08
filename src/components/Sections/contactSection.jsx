@@ -46,7 +46,7 @@ export default function ContactSection({fontLexend}) {
                         whileInView={{ x: 0, opacity: 1 }}
                         transition={{delay: 0.4, type: "spring"}}
                     >
-                        Feel free to get in touch with me and say hello!. You can reach me through the contact form below. Looking forward to connecting with you!
+                        Feel free to get in touch with me and say hello! You can reach me through the contact form below. Looking forward to connecting with you!
                     </motion.p>
 
                     {/* icons */}

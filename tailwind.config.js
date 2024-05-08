@@ -14,6 +14,11 @@ module.exports = {
       },
       fontSize: {
         xxs: ['0.5rem', '0.75rem']
+      },
+      fontFamily: {
+        'inter': ["Inter", "sans-serif"],
+        'poppins': ["Poppins", "sans-serif"],
+        'jost': ["Jost", "sans-serif"]
       }
     },
   },
