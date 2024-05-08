@@ -13,6 +13,7 @@ import githubIcon from "@/../public/icons/contacts/github-icon.png";
 import linkedinIcon from "@/../public/icons/contacts/linkedin-icon.png";
 import instaIcon from "@/../public/icons/contacts/instagram-icon.png";
 import facebookIcon from "@/../public/icons/contacts/facebook-icon.png";
+import Footer from "../Footer";
 
 
 

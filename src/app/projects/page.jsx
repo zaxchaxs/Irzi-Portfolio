@@ -5,6 +5,7 @@ import dataProject from "@/../public/json/projectsData.json";
 import ProjectCard from "@/components/ProjectCards";
 import Link from "next/link";
 import SingleUnderline from "@/components/Underlines/singleUnderline";
+import Footer from "@/components/Footer";
 
 const lexendDeca = Lexend_Deca({
     weight: "800",
@@ -14,7 +15,7 @@ const lexendDeca = Lexend_Deca({
 
 export default function ProjectsPage() {
     return (
-      <div className="p-10 sm:px-24 mx-auto pt-20 overflow-hidden">
+      <div className="p-10 sm:px-24 mx-auto pt-20 overflow-hidden w-full">
         <div className="w-full">
           <motion.div
             className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black ${lexendDeca.className} text-center p-2 w-full`}
@@ -50,9 +51,10 @@ export default function ProjectsPage() {
         </div>
         <div className="w-full flex justify-center py-10">
             <div className={`w-fit my-4 p-2 text-xs sm:text-base ${lexendDeca.className} underline shadow-xl rounded-md`}>
-                <Link href={"https://github.com/zaxchaxs"} target="blank">See More Projects I've Created</Link>
+                <Link href={"https://github.com/zaxchaxs?tab=repositories"} target="blank">See More Projects I've Created</Link>
             </div>
         </div>
+        <Footer />
       </div>
     );
 }

@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function ProjectCard({title, desc, srcImg, srcCode, year, tech }) {
@@ -20,13 +21,18 @@ export default function ProjectCard({title, desc, srcImg, srcCode, year, tech })
         setIsReadMore(!isReadMore);
     }
     return (
-      <div className="p-2 rounded-2xl relative bg-gray-600 shadow-xl w-full min-h-fit sm:min-h-[90vh] md:min-h-[100vh] lg:min-h-[78vh] h-fit">
+      <motion.div 
+      className="p-2 rounded-2xl relative bg-gray-600 shadow-2xl shadow-gray-600 w-full min-h-fit sm:min-h-[90vh] md:min-h-[100vh] lg:min-h-[78vh] h-fit"
+      initial={{ scale: 0.9, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ ease: [0.17, 0.67, 0.83, 0.67], delay: 0.3 }}
+      >
         <div className="rounded-2xl relative h-[25vh] sm:h-[30vh] md:h-[35vh]">
           <Image
             src={srcImg}
             alt={title}
             layout="fill"
-            className="rounded-2xl w-full"
+            className="rounded-2xl w-full placeholder:blur"
           />
         </div>
         <div className="p-2 text-slate-200 sm:min-h-[56vh] md:min-h-[65vh] lg:min-h-[40vh] items-end relative flex flex-col justify-between">
@@ -59,7 +65,7 @@ export default function ProjectCard({title, desc, srcImg, srcCode, year, tech })
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     );
 }
 

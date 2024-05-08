@@ -75,11 +75,8 @@ export default function Navbar({isHomePage}) {
 
 // Child Components
 function IconBtn({source, delay, path=1, onIconClick, route}) {
-	const [isTargeted, setIsTargeted] = useState(false);
-
     return (
 		<motion.div
-			onClick={() => setIsTargeted(!isTargeted)}
 			className="cursor-pointer"
 			whileTap={() => onIconClick(path, route)}
 			initial={{y: -10, opacity: 0, scale: 0.5}}
@@ -92,7 +89,6 @@ function IconBtn({source, delay, path=1, onIconClick, route}) {
 			  }}
 		>
 			<Image className="h-6 rounded-md w-fit" src={source} alt="Icon Button" />
-			<div className={`mt-1 bg-white w-full h-[3px] rounded-full ${isTargeted ? "" : "hidden"}`}></div>
 		</motion.div>
     )
 };
