@@ -60,7 +60,7 @@
             "tech": ["Next.js", "Motion Frame", "TailwindCSS", "ReactFullPage"],
             "source": "https://github.com/zaxchaxs/Irzi-Portfolio",
             "preview": "https://irzi-portfolio.vercel.app/",
-            "image": "",
+            "image": "/img/projectsImage/secondPortfolio.png",
             "year": "2024",
             "isDisplayed": false
         }

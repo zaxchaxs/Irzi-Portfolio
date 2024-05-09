@@ -27,7 +27,7 @@ export default function ProjectsPage() {
             <SingleUnderline />
           </motion.div>
           <motion.div
-            className="text-base md:text-lg p-2 text-justify sm:mb-10 md:mb-20"
+            className="text-base text-gray-600 md:text-xl p-2 text-justify sm:mb-10 md:mb-20"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ type: "spring", delay: 0.5 }}
