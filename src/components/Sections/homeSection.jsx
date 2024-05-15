@@ -8,7 +8,7 @@ import DoubleUnderline from '../Underlines/doubleUnderline';
 import Link from "next/link";
 import { motion } from "framer-motion";
 import mySelf from "../../../public/img/myself.jpg"
-import testing from "../../../public/img/testing.png"
+import mySelf2 from "../../../public/img/newMyself.jpg"
 
 
 export default function HomeSection({fontLexend}) {
@@ -22,7 +22,7 @@ export default function HomeSection({fontLexend}) {
         >
           <Image
             alt="Irzi Rahmatullah"
-            src={testing}
+            src={mySelf2}
             width={200}
             height={200}
             className="h-40 w-40 grayscale placeholder:blur hover:grayscale-0 duration-300 rounded-full object-cover items-center justify-center"
