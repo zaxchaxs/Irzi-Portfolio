@@ -1,18 +1,16 @@
 {
     "data": [
         {
-            "id": 1,
-            "title": "Weather Report",
-            "desc": "This project is the result of practicing API requests by creating a simple Weather Report web using JavaScript. Requesting the API to weather.visual crossing. With a simple interface, I managed to create this weather report even though its accuracy level is not very high. I learning basicaly about how to get data from an API and display it.",
-            "tech": ["JavaScript", "CSS", "HTML"],
-            "source": "https://github.com/zaxchaxs/Weather-Report",
-            "preview": "https://zaxchaxs.github.io/Weather-Report/public",
-            "image": "/img/projectsImage/wheaterReport.png",
-            "year": "2023",
+            "title": "ReactGroupChat Realtime Chat",
+            "desc": "I developed a real-time chat project using React.js, React Router, and Firebase Firestore. This project provided me with an opportunity to explore cutting-edge technologies while expanding my knowledge in web application development. Through this project, I learned a lot about directly using React, including effectively implementing hooks like useRef to manage DOM references. Additionally, I utilized Firestore for real-time database management, allowing for instant data synchronization between users. I also gained experience using React Router to handle navigation between pages within my application, ensuring a smooth and intuitive user experience. This project gave me a deeper practical understanding of modern web application development with state-of-the-art technologies.",
+            "tech": ["React", "TailwindCSS", "React Router", "Firebase", "Firestore", "Vite"],
+            "source": "https://github.com/zaxchaxs/ReactGroupChat-realtime-chat",
+            "preview": "https://react-group-chat-realtime-chat.vercel.app/",
+            "image": "/img/projectsImage/reactGroupChat.jpg",
+            "year": "2024",
             "isDisplayed": true
         },
         {
-            "id": 2,
             "title": "Irzi | First Portfolio",
             "desc": "My first portfolio website created only using Tailwind CSS and Vanilla JavaScript.",
             "tech": ["TailwindCSS", "JavaScript"],
@@ -23,17 +21,16 @@
             "isDisplayed": true
         },
         {
-            "id": 3,
-            "title": "Todo List RESTful API",
-            "desc": "This project is the culmination of my learning journey in building a RESTful API for effective task management and organization. API for managing and organizing your tasks effectively, like Create, Read, Update, and Delete (CRUD) a personal task management or integrating task functionality into your project. I learn so many things from this project, like how to use MySQL, Code Structure, Problem Solving, Routing, etc.",
-            "tech": ["Node.js", "Express", "Prisma", "Joi", "MySQL"],
-            "source": "https://github.com/zaxchaxs/TodoList-API-Project",
-            "image": "/img/projectsImage/todoListAPI.jpg",
+            "title": "Second Portfolio using NextJS",
+            "desc": "This portfolio website project is one of my learning outcomes about NextJS. By utilizing the Framer Motion framework for animations and ReactFullPage for full-screen display, along with TailwindCSS, it makes the website's appearance more attractive and dynamic. Not only that, but this project also incorporates data from JSON in its presentation, making it flexible and easily customizable.",
+            "tech": ["Next.js", "Motion Frame", "TailwindCSS", "ReactFullPage"],
+            "source": "https://github.com/zaxchaxs/Irzi-Portfolio",
+            "preview": "https://irzi-portfolio.vercel.app/",
+            "image": "/img/projectsImage/secondPortfolio.png",
             "year": "2024",
-            "isDisplayed": true
+            "isDisplayed": false
         },
         {
-            "id": 4,
             "title": "Todo List Web App With Next.js",
             "desc": "Practicing create a Todo List Web App with React and Next.js. This is basic project from learning Next.js. I trying to use my Todo List RESTful API and display it ini this project.",
             "tech": ["Node.js", "Next.js", "React"],
@@ -43,7 +40,6 @@
             "isDisplayed": true
         },
         {
-            "id": 5,
             "title": "MovieList With NextJS",
             "desc": "This is a simple web application built with Next.js that displays a list of movies and TV series. In this project I learn about how to use hooks like useState, and useEffect, fetch API in Next.js, about folder struckture in Nexj.js, routing, etc. After finished this project I++ exiting to learn more about Next.js",
             "tech": ["Next.js", "React", "TMDB API"],
@@ -54,14 +50,22 @@
             "isDisplayed": true
         },
         {
-            "id": 6,
-            "title": "Second Portfolio using NextJS",
-            "desc": "This portfolio website project is one of my learning outcomes about NextJS. By utilizing the Framer Motion framework for animations and ReactFullPage for full-screen display, along with TailwindCSS, it makes the website's appearance more attractive and dynamic. Not only that, but this project also incorporates data from JSON in its presentation, making it flexible and easily customizable.",
-            "tech": ["Next.js", "Motion Frame", "TailwindCSS", "ReactFullPage"],
-            "source": "https://github.com/zaxchaxs/Irzi-Portfolio",
-            "preview": "https://irzi-portfolio.vercel.app/",
-            "image": "/img/projectsImage/secondPortfolio.png",
+            "title": "Todo List RESTful API",
+            "desc": "This project is the culmination of my learning journey in building a RESTful API for effective task management and organization. API for managing and organizing your tasks effectively, like Create, Read, Update, and Delete (CRUD) a personal task management or integrating task functionality into your project. I learn so many things from this project, like how to use MySQL, Code Structure, Problem Solving, Routing, etc.",
+            "tech": ["Node.js", "Express", "Prisma", "Joi", "MySQL"],
+            "source": "https://github.com/zaxchaxs/TodoList-API-Project",
+            "image": "/img/projectsImage/todoListAPI.jpg",
             "year": "2024",
+            "isDisplayed": true
+        },
+        {
+            "title": "Weather Report",
+            "desc": "This project is the result of practicing API requests by creating a simple Weather Report web using JavaScript. Requesting the API to weather.visual crossing. With a simple interface, I managed to create this weather report even though its accuracy level is not very high. I learning basicaly about how to get data from an API and display it.",
+            "tech": ["JavaScript", "CSS", "HTML"],
+            "source": "https://github.com/zaxchaxs/Weather-Report",
+            "preview": "https://zaxchaxs.github.io/Weather-Report/public",
+            "image": "/img/projectsImage/wheaterReport.png",
+            "year": "2023",
             "isDisplayed": false
         }
     ]

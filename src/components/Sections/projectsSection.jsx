@@ -54,7 +54,7 @@ export default function ProjectsSection({fontLexend}) {
 
 
 function ProjectCard({data}) {
-    const [index, setIndex] = useState(1);
+    const [index, setIndex] = useState(0);
 
     const nextProjectHandler = () => {
         (index === data.filter(e => e.isDisplayed).length-1) ? setIndex(0) : setIndex(index+1);
