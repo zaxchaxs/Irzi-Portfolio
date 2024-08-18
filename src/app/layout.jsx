@@ -13,7 +13,7 @@ export const metadata = {
   description: "Irzi Rahmatullah portfolio",
 };
 
-export default function Layout({ children }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={"bg-gray-200 scroll-smooth " + jost.className}>

@@ -47,3 +47,16 @@
     50%{background-size:calc(100%/3) 100%,calc(100%/3) 0%  ,calc(100%/3) 100%}
     66%{background-size:calc(100%/3) 100%,calc(100%/3) 100%,calc(100%/3) 0%  }
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #7d7d7d !important; /* Ubah warna tombol */
+  
+  font-size: 5px !important;
+  width: 2px !important;
+  margin: 20px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #7d7d7d !important;
+}

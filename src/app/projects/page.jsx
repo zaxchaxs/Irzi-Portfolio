@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { Lexend_Deca } from 'next/font/google';
 import dataProject from "@/../public/json/projectsData.json";
-import ProjectCard from "@/components/ProjectCards";
+import ProjectCard from "@/components/ProjectCards/ProjectCards";
 import Link from "next/link";
 import SingleUnderline from "@/components/Underlines/singleUnderline";
 import Footer from "@/components/Footer";

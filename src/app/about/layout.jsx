@@ -5,12 +5,11 @@ export const metadata = {
   description: "About Me!"
 }
 
-export default function Layout({ children }) {
-    return(
-        <div className={`min-h-screen relative scroll-smooth`}>
-          <Navbar isHomePage={false} />
-          {children}
-        </div>
-    )
-
+export default function AboutLayout({ children }) {
+    return (
+      <>
+        <Navbar isHomePage={false} />
+        {children}
+      </>
+    );
 }

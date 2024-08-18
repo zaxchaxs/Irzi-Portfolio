@@ -108,7 +108,7 @@ export default function AboutPage() {
                 transition={{ delay: 0.7, type: "spring" }}
               >
                 Hi! I'm Irzi Rahmatullah. I'm from Bogor and currently doing my
-                thing at Singaperbangsa University Karawang. Yep, I'm diving
+                thing at University of Singaperbangsa Karawang. Yep, I'm diving
                 into the world of IT, majoring in Computer Science. That's why
                 I'm all about tech, especially software engineering. I'm really
                 into coding. It's like my go-to thing. Ever since I started
@@ -205,12 +205,7 @@ export default function AboutPage() {
                   Computer Science | 2023 - Now
                 </p>
                 <p className="text-justify text-gray-700 text-base sm:text-lg md:text-xl">
-                  Currently, I'm in my second semester at Singaperbangsa
-                  University Karawang, majoring in Computer Science. During my
-                  time there, I've had loads of opportunities to dive into new
-                  tech stuff. It's been all about honing my problem-solving
-                  skills, leveling up my programming game, boosting my web
-                  development skills, and a whole lot more.
+                  Currently, I'm in my third semester at University of Singaperbangsa Karawang, majoring in Computer Science. During my time there, I've had loads of opportunities to dive into new tech stuff. It's been all about honing my problem-solving skills, leveling up my programming game, boosting my web development skills, and a whole lot more.
                 </p>
               </motion.div>
             </div>

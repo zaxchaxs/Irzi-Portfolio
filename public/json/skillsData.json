@@ -5,6 +5,10 @@
             "name": "JavaScript"
         },
         {
+            "skillful": true,
+            "name": "TypeScript"
+        },
+        {
             "skillful": false,
             "name": "C++"
         },
@@ -25,6 +29,10 @@
             "name": "TailwindCSS"
         },
         {
+            "skillful": true,
+            "name": "Bootstrap"
+        },
+        {
             "skillful": false,
             "name": "React"
         },
@@ -37,12 +45,8 @@
             "name": "MySQL"
         },
         {
-            "skillful": true,
-            "name": "Bootstrap"
-        },
-        {
-            "skillful": true,
-            "name": "Problem Solving"
+            "skillful": false,
+            "name": "Firestore"
         }
     ],
     "tools": [
