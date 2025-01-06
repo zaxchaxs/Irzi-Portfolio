@@ -16,17 +16,21 @@ export default function ProjectPoster ({data}) {
   return (
     <div className={`flex items-center w-full object-cover`}>
       {/* github icon */}
-      <motion.div
-        className="absolute top-2 right-2 sm:w-14 w-8 z-10"
-        initial={{ x: 0, scale: 0, opacity: 0 }}
-        whileInView={{ x: 0, scale: 1, opacity: 1 }}
-        transition={{ delay: 0.3, type: "spring" }}
-        whileHover={{ scale: 1.2, transition: { delay: 0, type: "spring" } }}
-      >
-        <Link href={data.source} target="blank">
-          <Image src={githubIcon} alt="githubIcon" width={50} height={50} />
-        </Link>
-      </motion.div>
+      {
+        data.source && (
+          <motion.div
+            className="absolute top-2 right-2 sm:w-14 w-8 z-10"
+            initial={{ x: 0, scale: 0, opacity: 0 }}
+            whileInView={{ x: 0, scale: 1, opacity: 1 }}
+            transition={{ delay: 0.3, type: "spring" }}
+            whileHover={{ scale: 1.2, transition: { delay: 0, type: "spring" } }}
+          >
+            <Link href={data.source} target="blank">
+              <Image src={githubIcon} alt="githubIcon" width={50} height={50} />
+            </Link>
+          </motion.div>
+        )
+      }
 
       <motion.div
         className={`flex items-center relative w-full object-cover group overflow-hidden `}
