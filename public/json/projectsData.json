@@ -15,7 +15,7 @@
             "desc": "This is an web application that helps users record their income and expenses, as well as create and manage budgets. With interactive visualizations, this app makes it easy for users to track their financial situation efficiently.",
             "tech": ["React js", "Next.js", "Firebase", "Firestore", "vercel", "recharts"],
             "source": "https://github.com/zaxchaxs/finance-tracker",
-            "preview": "https://finance-tracker-inky-omega.vercel.app/",
+            "preview": "https://zaxchft.vercel.app/",
             "image": "/img/projectsImage/personalFinance.png",
             "year": "2024",
             "isDisplayed": true
