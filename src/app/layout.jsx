@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={"bg-gray-200 scroll-smooth " + jost.className}>
         <div className='min-h-screen relative'>
-          <Navbar isHomePage={true} />
+          <Navbar />
           {children}
         </div>
       </body>
