@@ -1,6 +1,16 @@
 {
     "data": [
         {
+            "title": "Geopark Indonesia (In Development)",
+            "desc": "I'm building an innovative website called Geopark Indonesia. This platform aims to collect, integrate, and provide geopark data from across Indonesia in a single, centralized resource. This idea stemmed from the need to facilitate easier access for the public, researchers, and geopark managers to information regarding the geological, cultural, and natural diversity of each geopark in Indonesia.In this project, I'm working as a Fullstack Developer, using Next.js for the frontend and Express for the backend. I've gained a lot of knowledge from this project, including how to manage dynamic website content through an Admin CMS, make content responsive across various devices, handle data input flow on the backend, and build a good API architecture.",
+            "tech": ["Next.js",  "Shadcn UI", "Express", "MySQL"],
+            "source": "",
+            "preview": "",
+            "image": "/img/projectsImage/geopark.png",
+            "year": "2024 - Present",
+            "isDisplayed": true
+        },
+        {
             "title": "Regional BAPPENAS",
             "desc": "I contributed to the development of the Regional BAPPENAS website as a front-end developer. Throughout this project, I gained valuable experience, including: Implementing multi-language features to make the website accessible to a diverse audience, managing state to efficiently handle data fetched from the server designing responsive and user-friendly interfaces, creating and maintaining efficient and reusable components, developing custom hooks to optimize API requests.",
             "tech": ["React js", "Next.js",  "Framer Mortion", "i18next"],
@@ -76,7 +86,7 @@
             "preview": "https://zaxchaxs.github.io/IrziRahmatullah-Portfolio/public/",
             "image": "/img/projectsImage/firstPortfolio.jpg",
             "year": "2024",
-            "isDisplayed": true
+            "isDisplayed": false
         },
         {
             "title": "Weather Report",
