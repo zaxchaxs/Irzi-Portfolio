@@ -74,7 +74,7 @@ export default function HomeSection({fontLexend}) {
               </p>
             </div>
             <div className="p-2 sm:p-4 flex justify-center items-center md:justify-start">
-              <Link href={"/docs/Irzi_Rahmatullah-CV.pdf"}>
+              <Link href={"/docs/Irzi_Rahmatullah-CV.pdf"} target="_blank">
                 <HomeButton
                   value="Download CV"
                   background={"bg-gray-600"}
